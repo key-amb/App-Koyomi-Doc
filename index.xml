@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Koyomi</title>
+    <link>http://localhost:1313/App-Koyomi-Doc/</link>
+    <description>Recent content on Koyomi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved.</copyright>
+    <lastBuildDate>Mon, 25 May 2015 21:07:48 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/App-Koyomi-Doc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>_index</title>
+      <link>http://localhost:1313/App-Koyomi-Doc/_index/</link>
+      <pubDate>Mon, 25 May 2015 21:07:48 +0900</pubDate>
+      
+      <guid>http://localhost:1313/App-Koyomi-Doc/_index/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-this:3976528693a0108357f4928017600865&#34;&gt;What is this?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Koyomi&lt;/strong&gt; is a simple distributed job scheduler which achieves High Availability.&lt;/p&gt;
+
+&lt;p&gt;You can run &lt;strong&gt;koyomi worker&lt;/strong&gt; on several servers.
+Then if one worker stops with a certain trouble, remaining alive workers will take after its jobs.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-use:3976528693a0108357f4928017600865&#34;&gt;How to use?&lt;/h2&gt;
+
+&lt;p&gt;All you need are followings in a nutshell:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A couple of servers on which &lt;strong&gt;koyomi worker&lt;/strong&gt; runs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Datastore&lt;/strong&gt; with high availability.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Currently supported datastore type is &lt;strong&gt;MySQL&lt;/strong&gt; only.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
