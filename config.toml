@@ -1,0 +1,12 @@
+baseurl = "http://key-amb.github.io/App-Koyomi-Doc/"
+languageCode = "en-us"
+title = "Koyomi"
+theme = "bootie-docs"
+copyright = "Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved."
+
+[params]
+  description = "A simple distributed job scheduler."
+  #withSitePosts = true
+  #mainMenu = ["about", "usage"]
+  noCategoryLink = true
+  repositoryUrl = "https://github.com/key-amb/perl5-App-Koyomi/"
