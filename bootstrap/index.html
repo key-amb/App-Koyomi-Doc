@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Koyomi">
+		<link rel="icon" href="http://key-amb.github.io/App-Koyomi-Doc/favicon.ico">
+		<title>Getting Started - Koyomi</title>
+		
+		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/highlight.js.min.css">
+		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootstrap-theme.css">
+		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/theme.css">
+		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootie-docs.css">
+	</head>
+
+<body role="document">
+
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="http://key-amb.github.io/App-Koyomi-Doc/">Koyomi</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/">Home</a></li>
+			
+				
+				
+					
+					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/about">About</a></li>
+				
+					
+					<li class="active"><a href="http://key-amb.github.io/App-Koyomi-Doc/bootstrap">Bootstrap</a></li>
+				
+			
+				
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+<div class="row">
+	<div class="col-sm-8 doc-main">
+		<main role="main">
+			<article>
+				<a id="title"></a>
+				<h1 class="doc-entry-title">Getting Started</h1>
+				<div class="doc-entry-meta">
+					<span><time datetime="2015-05-26">May 26, 2015</time></span>
+				</div>
+				<section>
+					
+
+<h2 id="install:caf96f80dec81066bbd3e06dfe6b4d25">Install</h2>
+
+<p>Currently, <strong>Koyomi</strong>&rsquo;s source code is available on GitHub.</p>
+
+<pre><code>git clone https://github.com/key-amb/perl5-App-Koyomi.git koyomi
+</code></pre>
+
+<p><a href="#">top</a></p>
+
+<h2 id="configure:caf96f80dec81066bbd3e06dfe6b4d25">Configure</h2>
+
+<p>The default configuration file is <code>config/default.toml</code>.<br />
+You can edit the file for customization.
+Or when you want to use the configuration file in another path, you can specify
+the path by environmental variable <code>$KOYOMI_CONFIG_PATH</code>.</p>
+
+<p>The following content shows available configuration parametes in the file.</p>
+
+<h3 id="general-parameters:caf96f80dec81066bbd3e06dfe6b4d25">General Parameters</h3>
+
+<pre><code>time_zone = &quot;Asia/Tokyo&quot; # Local time zone is used when not specified
+
+# Enable some debug parameters (see &quot;Debug Parameters&quot; below)
+# Don't set &quot;true&quot; on production environment.
+debug_mode = true
+</code></pre>
+
+<h3 id="logging-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Logging Parameters</h3>
+
+<pre><code>[log]
+debug   = true            # Enable debug log
+console = true            # Output to stderr
+file    = true            # Output to log file
+file_path = /path/to/log  # Log file path
+</code></pre>
+
+<h3 id="job-scheduling-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Job Scheduling Parameters</h3>
+
+<pre><code>[worker]
+interval_minutes = 1 # Worker interval
+
+# Must be shorter than interval_minutes
+minimum_interval_seconds = 30
+
+[schedule]
+update_interval_seconds = 120 # How often it re-fetch schedule from Datastore
+
+[job]
+# Must be shorter than worker.minimum_interval_seconds
+lock_ttl_seconds = 25
+</code></pre>
+
+<p>When <code>worker.interval_minutes = 1</code>, <em>koyomi worker</em> wakes up and execute scheduled jobs at that time once a minute like <strong>cron</strong> daemon.
+You can customize the parameter for longer intervals.</p>
+
+<p><em>Koyomi worker</em> tries to wake up when the second of time equals <code>00</code> (ex: <code>T09:03:00</code>).
+But it sleeps at least <code>worker.minimum_interval_seconds</code> every after spawning jobs once a <code>worker.interval_minutes</code>.</p>
+
+<p>So if you start <em>koyomi worker</em> at <code>T09:02:55</code> and given <code>worker.minimum_interval_seconds = 30</code>, next time <em>wokrer</em> wakes up at <code>T09:03:25</code>, after that <code>T09:04:00</code>, then <code>T09:05:00</code>, &hellip;.</p>
+
+<p><em>Koyomi worker</em> fetches jobs schedule from <strong>Datastore</strong> on start-up, and refetch it every after <code>schedule.update_interval_seconds</code>.</p>
+
+<p>Multiple <em>koyomi workers</em> are supposed to run with the same schedule <em>datastore</em>.<br />
+Only one <em>koyomi worker</em> runs a certain job at a time.</p>
+
+<p>When a <em>koyomi worker</em> wins to run a job, it records on <em>datastore</em> the &ldquo;time&rdquo; and the &ldquo;hostname&rdquo; and the &ldquo;process id&rdquo;.<br />
+On the other hand, another <em>koyomi worker</em> tries to run the job around the time.<br />
+But with the job record in <em>datastore</em>, it knows the other <em>worker</em> has run it.<br />
+When one <em>worker</em> has run a job within <code>job.lock_ttl_seconds</code>, the other <em>workers</em> quit to run the job.</p>
+
+<h3 id="data-source-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Data Source Parameters</h3>
+
+<pre><code>[datasource.module]
+job       = &quot;Teng&quot;
+semaphore = &quot;Teng&quot;
+
+[datasource.connector]
+dsn      = &quot;dbi:mysql:database=koyomi;host=127.0.0.1;port=3306&quot;
+user     = &quot;root&quot;
+password = &quot;&quot;
+
+# Can override for each entity
+[datasource.connector.job]
+dsn  = ...
+user = &quot;foo&quot;
+password = &quot;xxx&quot;
+
+[datasource.connector.semaphore]
+# Can override &quot;datasource.connector&quot;, too.
+</code></pre>
+
+<p>You can specify perl module to access each entity in <em>datastore</em>.<br />
+Currently, supported module is <code>Teng</code> only.</p>
+
+<p>Datasource <code>job</code> stands for job schedules.<br />
+Datasource <code>semaphore</code> stands for the record and lock entity which controls if one <em>koyomi worker</em> can run a job or not.</p>
+
+<h2 id="set-up-datastore:caf96f80dec81066bbd3e06dfe6b4d25">Set Up Datastore</h2>
+
+<p>Here are descriptions about how to set up <em>datastore</em>.</p>
+
+<h3 id="mysql:caf96f80dec81066bbd3e06dfe6b4d25">MySQL</h3>
+
+<p>MySQL database schema is available at <code>schema/koyomi.ddl</code> in the source code.</p>
+
+<p>You will register <code>jobs</code> by mysql client command or something else.</p>
+
+<p>NOTE:<br />
+You have to create a <code>semaphores</code> record whose <em>job_id</em> equals to <em>id</em> of registered <code>jobs</code> record.</p>
+
+				</section>
+			</article>
+		</main>
+	</div> 
+
+	
+<div class="col-sm-3 col-sm-offset-1 doc-sidebar">
+	<div class="sidebar-module">
+		<div class="sidebar-toc">
+			<h4>Table of Contents</h4>
+			<ul>
+				<li><strong><a href="#title">Getting Started</a></strong></li>
+			</ul>
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#install:caf96f80dec81066bbd3e06dfe6b4d25">Install</a></li>
+<li><a href="#configure:caf96f80dec81066bbd3e06dfe6b4d25">Configure</a>
+<ul>
+<li><a href="#general-parameters:caf96f80dec81066bbd3e06dfe6b4d25">General Parameters</a></li>
+<li><a href="#logging-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Logging Parameters</a></li>
+<li><a href="#job-scheduling-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Job Scheduling Parameters</a></li>
+<li><a href="#data-source-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Data Source Parameters</a></li>
+</ul></li>
+<li><a href="#set-up-datastore:caf96f80dec81066bbd3e06dfe6b4d25">Set Up Datastore</a>
+<ul>
+<li><a href="#mysql:caf96f80dec81066bbd3e06dfe6b4d25">MySQL</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+		</div>
+	</div>
+	<div class="sidebar-module">
+		<h4>Tags</h4>
+		<div class="tag-box">
+		
+			<a class="tag-item" href="http://key-amb.github.io/App-Koyomi-Doc/tags/document">document</a>
+		
+		</div>
+	</div>
+</div>
+
+</div> 
+
+
+<hr />
+
+<div class="row">
+	<div class="col-sm-8">
+		<p class="doc-footer-em"><a href="#">Back to TOP</a></p>
+	</div>
+</div>
+
+</div> 
+
+<footer class="doc-footer">
+	<p class="doc-footer-em">Browse <strong><a href="https://github.com/key-amb/perl5-App-Koyomi/">Repository</a></strong></p>
+	<p>Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved.</p>
+	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
+</footer>
+
+
+
+<script src="http://key-amb.github.io/App-Koyomi-Doc/js/jquery-1.11.2.min.js"></script>
+<script src="http://key-amb.github.io/App-Koyomi-Doc/js/bootstrap.min.js"></script>
+
+<script src="http://key-amb.github.io/App-Koyomi-Doc/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://key-amb.github.io/App-Koyomi-Doc/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

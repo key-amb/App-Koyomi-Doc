@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Koyomi">
 		<link rel="icon" href="http://key-amb.github.io/App-Koyomi-Doc/favicon.ico">
-		<title>General - Koyomi</title>
+		<title>About - Koyomi</title>
 		
 		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/highlight.js.min.css">
 		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
 				
 				
 					
-					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/about">About</a></li>
+					<li class="active"><a href="http://key-amb.github.io/App-Koyomi-Doc/about">About</a></li>
 				
 					
 					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/bootstrap">Bootstrap</a></li>
@@ -54,34 +54,68 @@
 <div class="row">
 	<div class="col-sm-8 doc-main">
 		<main role="main">
-			<div class="doc-list-header">
-				<h1>General</h1>
-			</div>
-			<div class="doc-list-entry">
-	
-				<a class="doc-entry" href="/App-Koyomi-Doc/about/">
-					<h3 class="doc-entry-title">About</h3>
-					<p class="doc-entry-meta"><time datetime="2015-05-26">May 26, 2015</time></p>
-				</a>
-	
-				<a class="doc-entry" href="/App-Koyomi-Doc/bootstrap/">
-					<h3 class="doc-entry-title">Getting Started</h3>
-					<p class="doc-entry-meta"><time datetime="2015-05-26">May 26, 2015</time></p>
-				</a>
-	
-			</div>
+			<article>
+				<a id="title"></a>
+				<h1 class="doc-entry-title">About</h1>
+				<div class="doc-entry-meta">
+					<span><time datetime="2015-05-26">May 26, 2015</time></span>
+				</div>
+				<section>
+					
+
+<h2 id="version:6083a88ee3411b0d17ce02d738f69d47">VERSION</h2>
+
+<p><em>v0.1.0</em></p>
+
+<h2 id="milestone:6083a88ee3411b0d17ce02d738f69d47">MILESTONE</h2>
+
+<p>Here are what I plan to implement to <em>Koyomi</em> towards <strong><em>v1.0.0</em></strong>:</p>
+
+<ul>
+<li><strong>CommandLine Interface</strong> for CRUD of job schedule.</li>
+<li>Divide <em>job timetable</em> from job entity so that you can configure one job to run on multiple schedulings.</li>
+<li><strong>Semaphore</strong> or <strong>Mutex</strong> for job execution so that you can avoid a long-time job to run coincidently.</li>
+<li>Concept of <strong>job timeout</strong>. When <em>semphore</em> or <em>mutex</em> is implemented, a job must free it after job finishes.
+But a job might fail without cleaning it up properly.<br />
+So after some time, it&rsquo;s prefered to assume the job failed.
+Then let&rsquo;s call that time <em>Timeout</em>.</li>
+</ul>
+
+<h2 id="license:6083a88ee3411b0d17ce02d738f69d47">LICENSE</h2>
+
+<p>Copyright &copy; YASUTAKE Kiyoshi.</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h2 id="author:6083a88ee3411b0d17ce02d738f69d47">AUTHOR</h2>
+
+<p>YASUTAKE Kiyoshi yasutake.kiyoshi@gmail.com</p>
+
+				</section>
+			</article>
 		</main>
 	</div> 
 
 	
 <div class="col-sm-3 col-sm-offset-1 doc-sidebar">
 	<div class="sidebar-module">
-		<h4>Categories</h4>
-		<ul class="list-unstyled">
-		
-			<li><a class="tag-item" href="http://key-amb.github.io/App-Koyomi-Doc/categories/general">general</a></li>
-		
-		</ul>
+		<div class="sidebar-toc">
+			<h4>Table of Contents</h4>
+			<ul>
+				<li><strong><a href="#title">About</a></strong></li>
+			</ul>
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#version:6083a88ee3411b0d17ce02d738f69d47">VERSION</a></li>
+<li><a href="#milestone:6083a88ee3411b0d17ce02d738f69d47">MILESTONE</a></li>
+<li><a href="#license:6083a88ee3411b0d17ce02d738f69d47">LICENSE</a></li>
+<li><a href="#author:6083a88ee3411b0d17ce02d738f69d47">AUTHOR</a></li>
+</ul></li>
+</ul>
+</nav>
+		</div>
 	</div>
 	<div class="sidebar-module">
 		<h4>Tags</h4>
