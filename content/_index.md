@@ -1,9 +1,6 @@
 +++
-categories = ["general"]
 date = "2015-05-25T21:07:48+09:00"
-tags = ["document"]
 title = "_index"
-
 +++
 
 ## What is this?
@@ -22,3 +19,8 @@ All you need are followings in a nutshell:
 
 Currently supported datastore type is **MySQL** only.
 
+## Next Step
+
+Read following materials to use **Koyomi**:
+
+* [Getting Started](bootstrap)
