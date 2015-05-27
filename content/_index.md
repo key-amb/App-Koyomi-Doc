@@ -10,6 +10,8 @@ title = "_index"
 You can run **koyomi worker** on several servers.
 Then if one worker stops with a certain trouble, remaining alive workers will take after its jobs.
 
+[About](about) page shows its current version and additional info about _Koyomi_.
+
 ## How to use?
 
 All you need are followings in a nutshell:
