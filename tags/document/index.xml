@@ -28,6 +28,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;CommandLine Interface&lt;/strong&gt; for CRUD of job schedule.&lt;/li&gt;
+&lt;li&gt;Enable to specify which &lt;em&gt;OS user&lt;/em&gt; executes the &lt;em&gt;job command&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;Divide &lt;em&gt;job timetable&lt;/em&gt; from job entity so that you can configure one job to run on multiple schedulings.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Semaphore&lt;/strong&gt; or &lt;strong&gt;Mutex&lt;/strong&gt; for job execution so that you can avoid a long-time job to run coincidently.&lt;/li&gt;
 &lt;li&gt;Concept of &lt;strong&gt;job timeout&lt;/strong&gt;. When &lt;em&gt;semphore&lt;/em&gt; or &lt;em&gt;mutex&lt;/em&gt; is implemented, a job must free it after job finishes.
