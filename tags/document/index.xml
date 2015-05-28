@@ -20,7 +20,7 @@
 
 &lt;h2 id=&#34;version:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;VERSION&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;v0.1.2&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;v0.1.4&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;milestone:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;MILESTONE&lt;/h2&gt;
 
@@ -35,13 +35,20 @@
 But a job might fail without cleaning it up properly.&lt;br /&gt;
 So after some time, it&amp;rsquo;s prefered to assume the job failed.
 Then let&amp;rsquo;s call that time &lt;em&gt;Timeout&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Support for a few datasource types more.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&#34;changes:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;CHANGES&lt;/h2&gt;
+
+&lt;p&gt;See &lt;a href=&#34;https://github.com/key-amb/perl5-App-Koyomi/blob/master/Changes&#34;&gt;Changes&lt;/a&gt; on the repository.&lt;/p&gt;
 
 &lt;h2 id=&#34;license:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;LICENSE&lt;/h2&gt;
 
 &lt;p&gt;Copyright &amp;copy; YASUTAKE Kiyoshi.&lt;/p&gt;
 
 &lt;p&gt;This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&#34;https://github.com/key-amb/perl5-App-Koyomi/blob/master/LICENSE&#34;&gt;LICENSE&lt;/a&gt; file.&lt;/p&gt;
 
 &lt;h2 id=&#34;author:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;AUTHOR&lt;/h2&gt;
 
@@ -172,6 +179,13 @@ Datasource &lt;code&gt;semaphore&lt;/code&gt; stands for the record and lock ent
 
 &lt;p&gt;NOTE:&lt;br /&gt;
 You have to create a &lt;code&gt;semaphores&lt;/code&gt; record whose &lt;em&gt;job_id&lt;/em&gt; equals to &lt;em&gt;id&lt;/em&gt; of registered &lt;code&gt;jobs&lt;/code&gt; record.&lt;/p&gt;
+
+&lt;h2 id=&#34;usage:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;You can launch &lt;code&gt;koyomi worker&lt;/code&gt; in the way like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;KOYOMI_CONFIG_PATH=/path/to/config.toml koyomi
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
