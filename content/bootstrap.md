@@ -125,3 +125,11 @@ You will register `jobs` by mysql client command or something else.
 
 NOTE:  
 You have to create a `semaphores` record whose _job_id_ equals to _id_ of registered `jobs` record.
+
+## Usage
+
+You can launch `koyomi worker` in the way like this:
+
+```
+KOYOMI_CONFIG_PATH=/path/to/config.toml koyomi
+```

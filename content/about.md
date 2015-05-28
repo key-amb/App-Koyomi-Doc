@@ -8,7 +8,7 @@ title = "About"
 
 ## VERSION
 
-_v0.1.2_
+_v0.1.4_
 
 ## MILESTONE
 
@@ -22,12 +22,19 @@ Here are what I plan to implement to _Koyomi_ towards **_v1.0.0_**:
 But a job might fail without cleaning it up properly.  
 So after some time, it's prefered to assume the job failed.
 Then let's call that time _Timeout_.
+* Support for a few datasource types more.
+
+## CHANGES
+
+See [Changes](https://github.com/key-amb/perl5-App-Koyomi/blob/master/Changes) on the repository.
 
 ## LICENSE
 
 Copyright (C) YASUTAKE Kiyoshi.
 
 This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+
+See [LICENSE](https://github.com/key-amb/perl5-App-Koyomi/blob/master/LICENSE) file.
 
 ## AUTHOR
 
