@@ -1,16 +1,22 @@
 +++
 categories = ["general"]
-date = "2015-05-26T02:25:13+09:00"
+date = "2015-05-29T00:25:13+09:00"
 tags = ["document"]
 title = "Getting Started"
 +++
 
 ## Install
 
-Currently, **Koyomi**'s source code is available on GitHub.
+Currently **Koyomi** is available on GitHub and CPAN.
+
+### From GitHub
+
+You can download archive files from https://github.com/key-amb/perl5-App-Koyomi/releases .
+
+### From CPAN
 
 ```
-git clone https://github.com/key-amb/perl5-App-Koyomi.git koyomi
+cpanm App::Koyomi
 ```
 
 [top](#)
