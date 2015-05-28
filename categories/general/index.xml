@@ -7,20 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved.</copyright>
-    <lastBuildDate>Tue, 26 May 2015 02:29:01 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2015 00:29:01 +0900</lastBuildDate>
     <atom:link href="http://key-amb.github.io/App-Koyomi-Doc/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
       <link>http://key-amb.github.io/App-Koyomi-Doc/about/</link>
-      <pubDate>Tue, 26 May 2015 02:29:01 +0900</pubDate>
+      <pubDate>Fri, 29 May 2015 00:29:01 +0900</pubDate>
       
       <guid>http://key-amb.github.io/App-Koyomi-Doc/about/</guid>
       <description>
 
 &lt;h2 id=&#34;version:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;VERSION&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;v0.1.0&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;v0.1.2&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;milestone:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;MILESTONE&lt;/h2&gt;
 
@@ -52,16 +52,22 @@ Then let&amp;rsquo;s call that time &lt;em&gt;Timeout&lt;/em&gt;.&lt;/li&gt;
     <item>
       <title>Getting Started</title>
       <link>http://key-amb.github.io/App-Koyomi-Doc/bootstrap/</link>
-      <pubDate>Tue, 26 May 2015 02:25:13 +0900</pubDate>
+      <pubDate>Fri, 29 May 2015 00:25:13 +0900</pubDate>
       
       <guid>http://key-amb.github.io/App-Koyomi-Doc/bootstrap/</guid>
       <description>
 
 &lt;h2 id=&#34;install:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;Install&lt;/h2&gt;
 
-&lt;p&gt;Currently, &lt;strong&gt;Koyomi&lt;/strong&gt;&amp;rsquo;s source code is available on GitHub.&lt;/p&gt;
+&lt;p&gt;Currently &lt;strong&gt;Koyomi&lt;/strong&gt; is available on GitHub and CPAN.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/key-amb/perl5-App-Koyomi.git koyomi
+&lt;h3 id=&#34;from-github:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;From GitHub&lt;/h3&gt;
+
+&lt;p&gt;You can download archive files from &lt;a href=&#34;https://github.com/key-amb/perl5-App-Koyomi/releases&#34;&gt;https://github.com/key-amb/perl5-App-Koyomi/releases&lt;/a&gt; .&lt;/p&gt;
+
+&lt;h3 id=&#34;from-cpan:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;From CPAN&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;cpanm App::Koyomi
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;a href=&#34;#&#34;&gt;top&lt;/a&gt;&lt;/p&gt;
