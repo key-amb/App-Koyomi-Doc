@@ -6,14 +6,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Koyomi">
-		<link rel="icon" href="http://key-amb.github.io/App-Koyomi-Doc/favicon.ico">
+		<link rel="icon" href="http://localhost:1313/App-Koyomi-Doc/favicon.ico">
 		<title>About - Koyomi</title>
 		
-		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/highlight.js.min.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootstrap.min.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootstrap-theme.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/theme.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootie-docs.css">
+		<link rel="stylesheet" href="http://localhost:1313/App-Koyomi-Doc/css/highlight.js.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/App-Koyomi-Doc/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://localhost:1313/App-Koyomi-Doc/css/bootstrap-theme.css">
+		<link rel="stylesheet" href="http://localhost:1313/App-Koyomi-Doc/css/theme.css">
+		<link rel="stylesheet" href="http://localhost:1313/App-Koyomi-Doc/css/bootie-docs.css">
 	</head>
 
 <body role="document">
@@ -28,19 +28,19 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="http://key-amb.github.io/App-Koyomi-Doc/">Koyomi</a>
+				<a class="navbar-brand" href="http://localhost:1313/App-Koyomi-Doc/">Koyomi</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/">Home</a></li>
+					<li ><a href="http://localhost:1313/App-Koyomi-Doc/">Home</a></li>
 			
 				
 				
 					
-					<li class="active"><a href="http://key-amb.github.io/App-Koyomi-Doc/about">About</a></li>
+					<li class="active"><a href="http://localhost:1313/App-Koyomi-Doc/about">About</a></li>
 				
 					
-					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/bootstrap">Bootstrap</a></li>
+					<li ><a href="http://localhost:1313/App-Koyomi-Doc/bootstrap">Bootstrap</a></li>
 				
 			
 				
@@ -65,7 +65,7 @@
 
 <h2 id="version:6083a88ee3411b0d17ce02d738f69d47">VERSION</h2>
 
-<p><em>v0.1.4</em></p>
+<p><em>v0.2.0</em></p>
 
 <h2 id="milestone:6083a88ee3411b0d17ce02d738f69d47">MILESTONE</h2>
 
@@ -74,7 +74,6 @@
 <ul>
 <li><strong>CommandLine Interface</strong> for CRUD of job schedule.</li>
 <li>Enable to specify which <em>OS user</em> executes the <em>job command</em>.</li>
-<li>Divide <em>job timetable</em> from job entity so that you can configure one job to run on multiple schedulings.</li>
 <li><strong>Semaphore</strong> or <strong>Mutex</strong> for job execution so that you can avoid a long-time job to run coincidently.</li>
 <li>Concept of <strong>job timeout</strong>. When <em>semphore</em> or <em>mutex</em> is implemented, a job must free it after job finishes.
 But a job might fail without cleaning it up properly.<br />
@@ -130,7 +129,7 @@ Then let&rsquo;s call that time <em>Timeout</em>.</li>
 		<h4>Tags</h4>
 		<div class="tag-box">
 		
-			<a class="tag-item" href="http://key-amb.github.io/App-Koyomi-Doc/tags/document">document</a>
+			<a class="tag-item" href="http://localhost:1313/App-Koyomi-Doc/tags/document">document</a>
 		
 		</div>
 	</div>
@@ -157,12 +156,15 @@ Then let&rsquo;s call that time <em>Timeout</em>.</li>
 
 
 
-<script src="http://key-amb.github.io/App-Koyomi-Doc/js/jquery-1.11.2.min.js"></script>
-<script src="http://key-amb.github.io/App-Koyomi-Doc/js/bootstrap.min.js"></script>
+<script src="http://localhost:1313/App-Koyomi-Doc/js/jquery-1.11.2.min.js"></script>
+<script src="http://localhost:1313/App-Koyomi-Doc/js/bootstrap.min.js"></script>
 
-<script src="http://key-amb.github.io/App-Koyomi-Doc/js/highlight.min.js"></script>
+<script src="http://localhost:1313/App-Koyomi-Doc/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="http://key-amb.github.io/App-Koyomi-Doc/js/ie10-viewport-bug-workaround.js"></script>
+<script src="http://localhost:1313/App-Koyomi-Doc/js/ie10-viewport-bug-workaround.js"></script>
 
-</body>
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>
