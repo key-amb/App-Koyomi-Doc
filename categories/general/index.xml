@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General on Koyomi</title>
-    <link>http://localhost:1313/App-Koyomi-Doc/categories/general/</link>
+    <link>http://key-amb.github.io/App-Koyomi-Doc/categories/general/</link>
     <description>Recent content in General on Koyomi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved.</copyright>
     <lastBuildDate>Fri, 29 May 2015 00:29:01 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/App-Koyomi-Doc/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://key-amb.github.io/App-Koyomi-Doc/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
-      <link>http://localhost:1313/App-Koyomi-Doc/about/</link>
+      <link>http://key-amb.github.io/App-Koyomi-Doc/about/</link>
       <pubDate>Fri, 29 May 2015 00:29:01 +0900</pubDate>
       
-      <guid>http://localhost:1313/App-Koyomi-Doc/about/</guid>
+      <guid>http://key-amb.github.io/App-Koyomi-Doc/about/</guid>
       <description>
 
 &lt;h2 id=&#34;version:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;VERSION&lt;/h2&gt;
@@ -57,10 +57,10 @@ Then let&amp;rsquo;s call that time &lt;em&gt;Timeout&lt;/em&gt;.&lt;/li&gt;
     
     <item>
       <title>Getting Started</title>
-      <link>http://localhost:1313/App-Koyomi-Doc/bootstrap/</link>
+      <link>http://key-amb.github.io/App-Koyomi-Doc/bootstrap/</link>
       <pubDate>Fri, 29 May 2015 00:25:13 +0900</pubDate>
       
-      <guid>http://localhost:1313/App-Koyomi-Doc/bootstrap/</guid>
+      <guid>http://key-amb.github.io/App-Koyomi-Doc/bootstrap/</guid>
       <description>
 
 &lt;h2 id=&#34;install:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;Install&lt;/h2&gt;
