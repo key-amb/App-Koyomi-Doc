@@ -1,6 +1,6 @@
 +++
 categories = ["general"]
-date = "2015-05-29T00:29:01+09:00"
+date = "2015-06-07T00:29:01+09:00"
 tags = ["document"]
 title = "About"
 
@@ -8,14 +8,19 @@ title = "About"
 
 ## VERSION
 
-_v0.2.0_
+_v0.4.1_
+
+## REQUIREMENTS
+
+You need Perl interpreter whose version is greater than or equal to _v5.10.1_.
+
+This program is expected to run on almost UNIX like systems.  
+But not expected to run on Windows. Because this program use _fork(2)_ of UNIX and POSIX _signal(2)_, there may be problems on running it.
 
 ## MILESTONE
 
 Here are what I plan to implement to _Koyomi_ towards **_v1.0.0_**:
 
-* **CommandLine Interface** for CRUD of job schedule.
-* Enable to specify which _OS user_ executes the _job command_.
 * **Semaphore** or **Mutex** for job execution so that you can avoid a long-time job to run coincidently.
 * Concept of **job timeout**. When _semphore_ or _mutex_ is implemented, a job must free it after job finishes.
 But a job might fail without cleaning it up properly.  

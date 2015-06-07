@@ -1,6 +1,6 @@
 +++
 categories = ["general"]
-date = "2015-05-29T00:25:13+09:00"
+date = "2015-06-07T00:25:13+09:00"
 tags = ["document"]
 title = "Getting Started"
 +++
@@ -9,15 +9,37 @@ title = "Getting Started"
 
 Currently **Koyomi** is available on GitHub and CPAN.
 
+_Koyomi_ depends on some external modules. And all its dependencies are written in `cpanfile`.
+
 ### From GitHub
 
 You can download archive files from https://github.com/key-amb/perl5-App-Koyomi/releases .
+
+```
+wget https://github.com/key-amb/perl5-App-Koyomi/archive/vX.Y.Z.tar.gz
+tar xvzf perl5-App-Koyomi-vX.Y.Z.tar.gz
+cd perl5-App-Koyomi-vX.Y.Z
+```
+
+If you need to install dependent modules of _Koyomi_, install them by `cpanfile`.
+
+```
+cpanm --installdeps .
+```
+
+Or you can use [carton](http://search.cpan.org/dist/carton/) to install modules under `local/` directory.
+
+```
+carton install
+```
 
 ### From CPAN
 
 ```
 cpanm App::Koyomi
 ```
+
+This installs all dependent modules of _Koyomi_ into your current perl.
 
 [top](#)
 
@@ -121,15 +143,19 @@ Here are descriptions about how to set up _datastore_.
 
 MySQL database schema is available at `schema/koyomi.ddl` in the source code.
 
-You will register `jobs` by mysql client command or something else.
-
-NOTE:  
-You have to create a `semaphores` record whose _job_id_ equals to _id_ of registered `jobs` record.
+You can register `jobs` by **koyomi-cli** (See below).
 
 ## Usage
+
+### Worker
 
 You can launch `koyomi worker` in the way like this:
 
 ```
 KOYOMI_CONFIG_PATH=/path/to/config.toml koyomi
 ```
+
+### CLI
+
+`koyomi-cli` is a handy command-line interface for CRUD of jobs.  
+Run `koyomi-cli help` to how to use this script.

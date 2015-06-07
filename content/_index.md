@@ -1,5 +1,5 @@
 +++
-date = "2015-05-25T21:07:48+09:00"
+date = "2015-06-07T21:07:48+09:00"
 title = "_index"
 +++
 
@@ -10,7 +10,7 @@ title = "_index"
 You can run **koyomi worker** on several servers.
 Then if one worker stops with a certain trouble, remaining alive workers will take after its jobs.
 
-[About](about) page shows its current version and additional info about _Koyomi_.
+[About](about) page shows its supported platform and additional info about _Koyomi_.
 
 ## How to use?
 
