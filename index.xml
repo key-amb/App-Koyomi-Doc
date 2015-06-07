@@ -36,7 +36,7 @@ Then if one worker stops with a certain trouble, remaining alive workers will ta
 &lt;li&gt;&lt;strong&gt;Datastore&lt;/strong&gt; with high availability.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Currently supported datastore type is &lt;strong&gt;MySQL&lt;/strong&gt; only.&lt;/p&gt;
+&lt;p&gt;Currently supported datastore types are &lt;strong&gt;MySQL&lt;/strong&gt; and &lt;strong&gt;SQLite&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;next-step:3976528693a0108357f4928017600865&#34;&gt;Next Step&lt;/h2&gt;
 
@@ -58,7 +58,7 @@ Then if one worker stops with a certain trouble, remaining alive workers will ta
 
 &lt;h2 id=&#34;version:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;VERSION&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;v0.4.2&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;v0.5.0&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;requirements:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;REQUIREMENTS&lt;/h2&gt;
 
@@ -206,9 +206,11 @@ When one &lt;em&gt;worker&lt;/em&gt; has run a job within &lt;code&gt;job.lock_t
 &lt;pre&gt;&lt;code&gt;[datasource.module]
 job       = &amp;quot;Teng&amp;quot;
 semaphore = &amp;quot;Teng&amp;quot;
+#semaphore = &amp;quot;None&amp;quot;
 
 [datasource.connector]
 dsn      = &amp;quot;dbi:mysql:database=koyomi;host=127.0.0.1;port=3306&amp;quot;
+#dsn      = &amp;quot;dbi:SQLite:koyomi.sqlite&amp;quot;
 user     = &amp;quot;root&amp;quot;
 password = &amp;quot;&amp;quot;
 
@@ -222,11 +224,15 @@ password = &amp;quot;xxx&amp;quot;
 # Can override &amp;quot;datasource.connector&amp;quot;, too.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;You can specify perl module to access each entity in &lt;em&gt;datastore&lt;/em&gt;.&lt;br /&gt;
-Currently, supported module is &lt;code&gt;Teng&lt;/code&gt; only.&lt;/p&gt;
-
 &lt;p&gt;Datasource &lt;code&gt;job&lt;/code&gt; stands for job schedules.&lt;br /&gt;
 Datasource &lt;code&gt;semaphore&lt;/code&gt; stands for the record and lock entity which controls if one &lt;em&gt;koyomi worker&lt;/em&gt; can run a job or not.&lt;/p&gt;
+
+&lt;p&gt;You can specify perl module to access each entity of &lt;em&gt;datastore&lt;/em&gt;.&lt;br /&gt;
+&lt;code&gt;Teng&lt;/code&gt; modules are implemented for both &amp;ldquo;job&amp;rdquo; and &amp;ldquo;semaphore&amp;rdquo; datastore.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;None&lt;/code&gt; module which is only for &amp;ldquo;semaphore&amp;rdquo; satisfies the required interface of &amp;ldquo;semaphore&amp;rdquo; module, but actually does nothing about &amp;ldquo;semaphore&amp;rdquo;.&lt;br /&gt;
+&lt;code&gt;None&lt;/code&gt; module is to be used when worker runs in a standalone mode while &amp;ldquo;job&amp;rdquo; is on local datastore like SQLite.
+Because exclusive control for job execution is not required when there is only single worker.&lt;/p&gt;
 
 &lt;h2 id=&#34;set-up-datastore:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;Set Up Datastore&lt;/h2&gt;
 
@@ -234,9 +240,16 @@ Datasource &lt;code&gt;semaphore&lt;/code&gt; stands for the record and lock ent
 
 &lt;h3 id=&#34;mysql:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;MySQL&lt;/h3&gt;
 
-&lt;p&gt;MySQL database schema is available at &lt;code&gt;schema/koyomi.ddl&lt;/code&gt; in the source code.&lt;/p&gt;
+&lt;p&gt;MySQL database schema is available at &lt;code&gt;schema/mysql/koyomi.ddl&lt;/code&gt; in the source code repository.&lt;/p&gt;
 
-&lt;p&gt;You can register &lt;code&gt;jobs&lt;/code&gt; by &lt;strong&gt;koyomi-cli&lt;/strong&gt; (See below).&lt;/p&gt;
+&lt;h3 id=&#34;sqlite:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;SQLite&lt;/h3&gt;
+
+&lt;p&gt;SQLite database schema is also available at &lt;code&gt;schema/sqlite/koyomi.ddl&lt;/code&gt; in the source code repository.&lt;/p&gt;
+
+&lt;h3 id=&#34;job-registration:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;Job Registration&lt;/h3&gt;
+
+&lt;p&gt;You can register &lt;code&gt;jobs&lt;/code&gt; by &lt;strong&gt;koyomi-cli&lt;/strong&gt; (See below).&lt;br /&gt;
+Note that you have to prepare configuration file with right datasource settings beforehand.&lt;/p&gt;
 
 &lt;h2 id=&#34;usage:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;Usage&lt;/h2&gt;
 
