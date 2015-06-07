@@ -1,4 +1,5 @@
 .PHONY: site server publish
+publish: site
 
 site:
 	hugo
