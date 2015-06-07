@@ -19,7 +19,7 @@ All you need are followings in a nutshell:
 * A couple of servers on which **koyomi worker** runs.
 * **Datastore** with high availability.
 
-Currently supported datastore type is **MySQL** only.
+Currently supported datastore types are **MySQL** and **SQLite**.
 
 ## Next Step
 

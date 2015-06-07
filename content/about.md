@@ -8,7 +8,7 @@ title = "About"
 
 ## VERSION
 
-_v0.4.2_
+_v0.5.0_
 
 ## REQUIREMENTS
 

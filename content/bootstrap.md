@@ -113,9 +113,11 @@ When one _worker_ has run a job within `job.lock_ttl_seconds`, the other _worker
 [datasource.module]
 job       = "Teng"
 semaphore = "Teng"
+#semaphore = "None"
 
 [datasource.connector]
 dsn      = "dbi:mysql:database=koyomi;host=127.0.0.1;port=3306"
+#dsn      = "dbi:SQLite:koyomi.sqlite"
 user     = "root"
 password = ""
 
@@ -129,11 +131,15 @@ password = "xxx"
 # Can override "datasource.connector", too.
 ```
 
-You can specify perl module to access each entity in _datastore_.  
-Currently, supported module is `Teng` only.
-
 Datasource `job` stands for job schedules.  
 Datasource `semaphore` stands for the record and lock entity which controls if one _koyomi worker_ can run a job or not.
+
+You can specify perl module to access each entity of _datastore_.  
+`Teng` modules are implemented for both "job" and "semaphore" datastore.
+
+`None` module which is only for "semaphore" satisfies the required interface of "semaphore" module, but actually does nothing about "semaphore".  
+`None` module is to be used when worker runs in a standalone mode while "job" is on local datastore like SQLite.
+Because exclusive control for job execution is not required when there is only single worker.
 
 ## Set Up Datastore
 
@@ -141,9 +147,16 @@ Here are descriptions about how to set up _datastore_.
 
 ### MySQL
 
-MySQL database schema is available at `schema/koyomi.ddl` in the source code.
+MySQL database schema is available at `schema/mysql/koyomi.ddl` in the source code repository.
 
-You can register `jobs` by **koyomi-cli** (See below).
+### SQLite
+
+SQLite database schema is also available at `schema/sqlite/koyomi.ddl` in the source code repository.
+
+### Job Registration
+
+You can register `jobs` by **koyomi-cli** (See below).  
+Note that you have to prepare configuration file with right datasource settings beforehand.
 
 ## Usage
 
