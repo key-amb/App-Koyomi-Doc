@@ -58,7 +58,7 @@ Then if one worker stops with a certain trouble, remaining alive workers will ta
 
 &lt;h2 id=&#34;version:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;VERSION&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;v0.4.1&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;v0.4.2&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;requirements:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;REQUIREMENTS&lt;/h2&gt;
 
@@ -242,15 +242,17 @@ Datasource &lt;code&gt;semaphore&lt;/code&gt; stands for the record and lock ent
 
 &lt;h3 id=&#34;worker:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;Worker&lt;/h3&gt;
 
-&lt;p&gt;You can launch &lt;code&gt;koyomi worker&lt;/code&gt; in the way like this:&lt;/p&gt;
+&lt;p&gt;You can launch &lt;strong&gt;koyomi worker&lt;/strong&gt; in the way like this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;KOYOMI_CONFIG_PATH=/path/to/config.toml koyomi
+&lt;pre&gt;&lt;code&gt;koyomi -c /path/to/config.toml [--debug]
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can see details of command-line options by &lt;code&gt;koyomi --help&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;cli:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;CLI&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;koyomi-cli&lt;/code&gt; is a handy command-line interface for CRUD of jobs.&lt;br /&gt;
-Run &lt;code&gt;koyomi-cli help&lt;/code&gt; to how to use this script.&lt;/p&gt;
+Run &lt;code&gt;koyomi-cli help&lt;/code&gt; to see how to use this script.&lt;/p&gt;
 </description>
     </item>
     
