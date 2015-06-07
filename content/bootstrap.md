@@ -149,13 +149,15 @@ You can register `jobs` by **koyomi-cli** (See below).
 
 ### Worker
 
-You can launch `koyomi worker` in the way like this:
+You can launch **koyomi worker** in the way like this:
 
 ```
-KOYOMI_CONFIG_PATH=/path/to/config.toml koyomi
+koyomi -c /path/to/config.toml [--debug]
 ```
+
+You can see details of command-line options by `koyomi --help`.
 
 ### CLI
 
 `koyomi-cli` is a handy command-line interface for CRUD of jobs.  
-Run `koyomi-cli help` to how to use this script.
+Run `koyomi-cli help` to see how to use this script.
