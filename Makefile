@@ -1,5 +1,4 @@
 .PHONY: site server publish
-publish: site
 
 site:
 	hugo
@@ -7,5 +6,5 @@ site:
 server:
 	hugo server -w
 
-publish:
+publish: site
 	./publish.sh
