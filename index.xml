@@ -7,8 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved.</copyright>
-    <lastBuildDate>Sun, 07 Jun 2015 00:29:01 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2015 21:07:48 +0900</lastBuildDate>
     <atom:link href="http://key-amb.github.io/App-Koyomi-Doc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>_index</title>
+      <link>http://key-amb.github.io/App-Koyomi-Doc/_index/</link>
+      <pubDate>Sun, 07 Jun 2015 21:07:48 +0900</pubDate>
+      
+      <guid>http://key-amb.github.io/App-Koyomi-Doc/_index/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-this:3976528693a0108357f4928017600865&#34;&gt;What is this?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Koyomi&lt;/strong&gt; is a simple distributed job scheduler which achieves High Availability.&lt;/p&gt;
+
+&lt;p&gt;You can run &lt;strong&gt;koyomi worker&lt;/strong&gt; on several servers.
+Then if one worker stops with a certain trouble, remaining alive workers will take after its jobs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;about&#34;&gt;About&lt;/a&gt; page shows its supported platform and additional info about &lt;em&gt;Koyomi&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-use:3976528693a0108357f4928017600865&#34;&gt;How to use?&lt;/h2&gt;
+
+&lt;p&gt;All you need are followings in a nutshell:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A couple of servers on which &lt;strong&gt;koyomi worker&lt;/strong&gt; runs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Datastore&lt;/strong&gt; with high availability.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Currently supported datastore type is &lt;strong&gt;MySQL&lt;/strong&gt; only.&lt;/p&gt;
+
+&lt;h2 id=&#34;next-step:3976528693a0108357f4928017600865&#34;&gt;Next Step&lt;/h2&gt;
+
+&lt;p&gt;Read following materials to use &lt;strong&gt;Koyomi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;bootstrap&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>About</title>
@@ -20,15 +58,20 @@
 
 &lt;h2 id=&#34;version:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;VERSION&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;v0.3.0&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;v0.4.1&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;REQUIREMENTS&lt;/h2&gt;
+
+&lt;p&gt;You need Perl interpreter whose version is greater than or equal to &lt;em&gt;v5.10.1&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This program is expected to run on almost UNIX like systems.&lt;br /&gt;
+But not expected to run on Windows. Because this program use &lt;em&gt;fork(2)&lt;/em&gt; of UNIX and POSIX &lt;em&gt;signal(2)&lt;/em&gt;, there may be problems on running it.&lt;/p&gt;
 
 &lt;h2 id=&#34;milestone:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;MILESTONE&lt;/h2&gt;
 
 &lt;p&gt;Here are what I plan to implement to &lt;em&gt;Koyomi&lt;/em&gt; towards &lt;strong&gt;&lt;em&gt;v1.0.0&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CommandLine Interface&lt;/strong&gt; for CRUD of job schedule.&lt;/li&gt;
-&lt;li&gt;Enable to specify which &lt;em&gt;OS user&lt;/em&gt; executes the &lt;em&gt;job command&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Semaphore&lt;/strong&gt; or &lt;strong&gt;Mutex&lt;/strong&gt; for job execution so that you can avoid a long-time job to run coincidently.&lt;/li&gt;
 &lt;li&gt;Concept of &lt;strong&gt;job timeout&lt;/strong&gt;. When &lt;em&gt;semphore&lt;/em&gt; or &lt;em&gt;mutex&lt;/em&gt; is implemented, a job must free it after job finishes.
 But a job might fail without cleaning it up properly.&lt;br /&gt;
@@ -58,7 +101,7 @@ Then let&amp;rsquo;s call that time &lt;em&gt;Timeout&lt;/em&gt;.&lt;/li&gt;
     <item>
       <title>Getting Started</title>
       <link>http://key-amb.github.io/App-Koyomi-Doc/bootstrap/</link>
-      <pubDate>Fri, 29 May 2015 00:25:13 +0900</pubDate>
+      <pubDate>Sun, 07 Jun 2015 00:25:13 +0900</pubDate>
       
       <guid>http://key-amb.github.io/App-Koyomi-Doc/bootstrap/</guid>
       <description>
@@ -67,14 +110,33 @@ Then let&amp;rsquo;s call that time &lt;em&gt;Timeout&lt;/em&gt;.&lt;/li&gt;
 
 &lt;p&gt;Currently &lt;strong&gt;Koyomi&lt;/strong&gt; is available on GitHub and CPAN.&lt;/p&gt;
 
+&lt;p&gt;&lt;em&gt;Koyomi&lt;/em&gt; depends on some external modules. And all its dependencies are written in &lt;code&gt;cpanfile&lt;/code&gt;.&lt;/p&gt;
+
 &lt;h3 id=&#34;from-github:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;From GitHub&lt;/h3&gt;
 
 &lt;p&gt;You can download archive files from &lt;a href=&#34;https://github.com/key-amb/perl5-App-Koyomi/releases&#34;&gt;https://github.com/key-amb/perl5-App-Koyomi/releases&lt;/a&gt; .&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;wget https://github.com/key-amb/perl5-App-Koyomi/archive/vX.Y.Z.tar.gz
+tar xvzf perl5-App-Koyomi-vX.Y.Z.tar.gz
+cd perl5-App-Koyomi-vX.Y.Z
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you need to install dependent modules of &lt;em&gt;Koyomi&lt;/em&gt;, install them by &lt;code&gt;cpanfile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cpanm --installdeps .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or you can use &lt;a href=&#34;http://search.cpan.org/dist/carton/&#34;&gt;carton&lt;/a&gt; to install modules under &lt;code&gt;local/&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;carton install
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;from-cpan:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;From CPAN&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;cpanm App::Koyomi
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This installs all dependent modules of &lt;em&gt;Koyomi&lt;/em&gt; into your current perl.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;#&#34;&gt;top&lt;/a&gt;&lt;/p&gt;
 
@@ -174,55 +236,21 @@ Datasource &lt;code&gt;semaphore&lt;/code&gt; stands for the record and lock ent
 
 &lt;p&gt;MySQL database schema is available at &lt;code&gt;schema/koyomi.ddl&lt;/code&gt; in the source code.&lt;/p&gt;
 
-&lt;p&gt;You will register &lt;code&gt;jobs&lt;/code&gt; by mysql client command or something else.&lt;/p&gt;
-
-&lt;p&gt;NOTE:&lt;br /&gt;
-You have to create a &lt;code&gt;semaphores&lt;/code&gt; record whose &lt;em&gt;job_id&lt;/em&gt; equals to &lt;em&gt;id&lt;/em&gt; of registered &lt;code&gt;jobs&lt;/code&gt; record.&lt;/p&gt;
+&lt;p&gt;You can register &lt;code&gt;jobs&lt;/code&gt; by &lt;strong&gt;koyomi-cli&lt;/strong&gt; (See below).&lt;/p&gt;
 
 &lt;h2 id=&#34;usage:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;h3 id=&#34;worker:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;Worker&lt;/h3&gt;
 
 &lt;p&gt;You can launch &lt;code&gt;koyomi worker&lt;/code&gt; in the way like this:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;KOYOMI_CONFIG_PATH=/path/to/config.toml koyomi
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>_index</title>
-      <link>http://key-amb.github.io/App-Koyomi-Doc/_index/</link>
-      <pubDate>Mon, 25 May 2015 21:07:48 +0900</pubDate>
-      
-      <guid>http://key-amb.github.io/App-Koyomi-Doc/_index/</guid>
-      <description>
 
-&lt;h2 id=&#34;what-is-this:3976528693a0108357f4928017600865&#34;&gt;What is this?&lt;/h2&gt;
+&lt;h3 id=&#34;cli:caf96f80dec81066bbd3e06dfe6b4d25&#34;&gt;CLI&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Koyomi&lt;/strong&gt; is a simple distributed job scheduler which achieves High Availability.&lt;/p&gt;
-
-&lt;p&gt;You can run &lt;strong&gt;koyomi worker&lt;/strong&gt; on several servers.
-Then if one worker stops with a certain trouble, remaining alive workers will take after its jobs.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;about&#34;&gt;About&lt;/a&gt; page shows its current version and additional info about &lt;em&gt;Koyomi&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-use:3976528693a0108357f4928017600865&#34;&gt;How to use?&lt;/h2&gt;
-
-&lt;p&gt;All you need are followings in a nutshell:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;A couple of servers on which &lt;strong&gt;koyomi worker&lt;/strong&gt; runs.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Datastore&lt;/strong&gt; with high availability.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Currently supported datastore type is &lt;strong&gt;MySQL&lt;/strong&gt; only.&lt;/p&gt;
-
-&lt;h2 id=&#34;next-step:3976528693a0108357f4928017600865&#34;&gt;Next Step&lt;/h2&gt;
-
-&lt;p&gt;Read following materials to use &lt;strong&gt;Koyomi&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;bootstrap&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;koyomi-cli&lt;/code&gt; is a handy command-line interface for CRUD of jobs.&lt;br /&gt;
+Run &lt;code&gt;koyomi-cli help&lt;/code&gt; to how to use this script.&lt;/p&gt;
 </description>
     </item>
     

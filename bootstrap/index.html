@@ -58,7 +58,7 @@
 				<a id="title"></a>
 				<h1 class="doc-entry-title">Getting Started</h1>
 				<div class="doc-entry-meta">
-					<span><time datetime="2015-05-29">May 29, 2015</time></span>
+					<span><time datetime="2015-06-07">June 07, 2015</time></span>
 				</div>
 				<section>
 					
@@ -67,14 +67,33 @@
 
 <p>Currently <strong>Koyomi</strong> is available on GitHub and CPAN.</p>
 
+<p><em>Koyomi</em> depends on some external modules. And all its dependencies are written in <code>cpanfile</code>.</p>
+
 <h3 id="from-github:caf96f80dec81066bbd3e06dfe6b4d25">From GitHub</h3>
 
 <p>You can download archive files from <a href="https://github.com/key-amb/perl5-App-Koyomi/releases">https://github.com/key-amb/perl5-App-Koyomi/releases</a> .</p>
+
+<pre><code>wget https://github.com/key-amb/perl5-App-Koyomi/archive/vX.Y.Z.tar.gz
+tar xvzf perl5-App-Koyomi-vX.Y.Z.tar.gz
+cd perl5-App-Koyomi-vX.Y.Z
+</code></pre>
+
+<p>If you need to install dependent modules of <em>Koyomi</em>, install them by <code>cpanfile</code>.</p>
+
+<pre><code>cpanm --installdeps .
+</code></pre>
+
+<p>Or you can use <a href="http://search.cpan.org/dist/carton/">carton</a> to install modules under <code>local/</code> directory.</p>
+
+<pre><code>carton install
+</code></pre>
 
 <h3 id="from-cpan:caf96f80dec81066bbd3e06dfe6b4d25">From CPAN</h3>
 
 <pre><code>cpanm App::Koyomi
 </code></pre>
+
+<p>This installs all dependent modules of <em>Koyomi</em> into your current perl.</p>
 
 <p><a href="#">top</a></p>
 
@@ -174,17 +193,21 @@ Datasource <code>semaphore</code> stands for the record and lock entity which co
 
 <p>MySQL database schema is available at <code>schema/koyomi.ddl</code> in the source code.</p>
 
-<p>You will register <code>jobs</code> by mysql client command or something else.</p>
-
-<p>NOTE:<br />
-You have to create a <code>semaphores</code> record whose <em>job_id</em> equals to <em>id</em> of registered <code>jobs</code> record.</p>
+<p>You can register <code>jobs</code> by <strong>koyomi-cli</strong> (See below).</p>
 
 <h2 id="usage:caf96f80dec81066bbd3e06dfe6b4d25">Usage</h2>
+
+<h3 id="worker:caf96f80dec81066bbd3e06dfe6b4d25">Worker</h3>
 
 <p>You can launch <code>koyomi worker</code> in the way like this:</p>
 
 <pre><code>KOYOMI_CONFIG_PATH=/path/to/config.toml koyomi
 </code></pre>
+
+<h3 id="cli:caf96f80dec81066bbd3e06dfe6b4d25">CLI</h3>
+
+<p><code>koyomi-cli</code> is a handy command-line interface for CRUD of jobs.<br />
+Run <code>koyomi-cli help</code> to how to use this script.</p>
 
 				</section>
 			</article>
@@ -219,7 +242,11 @@ You have to create a <code>semaphores</code> record whose <em>job_id</em> equals
 <ul>
 <li><a href="#mysql:caf96f80dec81066bbd3e06dfe6b4d25">MySQL</a></li>
 </ul></li>
-<li><a href="#usage:caf96f80dec81066bbd3e06dfe6b4d25">Usage</a></li>
+<li><a href="#usage:caf96f80dec81066bbd3e06dfe6b4d25">Usage</a>
+<ul>
+<li><a href="#worker:caf96f80dec81066bbd3e06dfe6b4d25">Worker</a></li>
+<li><a href="#cli:caf96f80dec81066bbd3e06dfe6b4d25">CLI</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>

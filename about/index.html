@@ -65,15 +65,20 @@
 
 <h2 id="version:6083a88ee3411b0d17ce02d738f69d47">VERSION</h2>
 
-<p><em>v0.3.0</em></p>
+<p><em>v0.4.1</em></p>
+
+<h2 id="requirements:6083a88ee3411b0d17ce02d738f69d47">REQUIREMENTS</h2>
+
+<p>You need Perl interpreter whose version is greater than or equal to <em>v5.10.1</em>.</p>
+
+<p>This program is expected to run on almost UNIX like systems.<br />
+But not expected to run on Windows. Because this program use <em>fork(2)</em> of UNIX and POSIX <em>signal(2)</em>, there may be problems on running it.</p>
 
 <h2 id="milestone:6083a88ee3411b0d17ce02d738f69d47">MILESTONE</h2>
 
 <p>Here are what I plan to implement to <em>Koyomi</em> towards <strong><em>v1.0.0</em></strong>:</p>
 
 <ul>
-<li><strong>CommandLine Interface</strong> for CRUD of job schedule.</li>
-<li>Enable to specify which <em>OS user</em> executes the <em>job command</em>.</li>
 <li><strong>Semaphore</strong> or <strong>Mutex</strong> for job execution so that you can avoid a long-time job to run coincidently.</li>
 <li>Concept of <strong>job timeout</strong>. When <em>semphore</em> or <em>mutex</em> is implemented, a job must free it after job finishes.
 But a job might fail without cleaning it up properly.<br />
@@ -116,6 +121,7 @@ Then let&rsquo;s call that time <em>Timeout</em>.</li>
 <li>
 <ul>
 <li><a href="#version:6083a88ee3411b0d17ce02d738f69d47">VERSION</a></li>
+<li><a href="#requirements:6083a88ee3411b0d17ce02d738f69d47">REQUIREMENTS</a></li>
 <li><a href="#milestone:6083a88ee3411b0d17ce02d738f69d47">MILESTONE</a></li>
 <li><a href="#changes:6083a88ee3411b0d17ce02d738f69d47">CHANGES</a></li>
 <li><a href="#license:6083a88ee3411b0d17ce02d738f69d47">LICENSE</a></li>
