@@ -7,58 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved.</copyright>
-    <lastBuildDate>Sun, 07 Jun 2015 21:07:48 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2015 01:00:00 +0900</lastBuildDate>
     <atom:link href="http://key-amb.github.io/App-Koyomi-Doc/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>_index</title>
-      <link>http://key-amb.github.io/App-Koyomi-Doc/_index/</link>
-      <pubDate>Sun, 07 Jun 2015 21:07:48 +0900</pubDate>
-      
-      <guid>http://key-amb.github.io/App-Koyomi-Doc/_index/</guid>
-      <description>
-
-&lt;h2 id=&#34;what-is-this:3976528693a0108357f4928017600865&#34;&gt;What is this?&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Koyomi&lt;/strong&gt; is a simple distributed job scheduler which achieves High Availability.&lt;/p&gt;
-
-&lt;p&gt;You can run &lt;strong&gt;koyomi worker&lt;/strong&gt; on several servers.
-Then if one worker stops with a certain trouble, remaining alive workers will take after its jobs.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;about&#34;&gt;About&lt;/a&gt; page shows its supported platform and additional info about &lt;em&gt;Koyomi&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-use:3976528693a0108357f4928017600865&#34;&gt;How to use?&lt;/h2&gt;
-
-&lt;p&gt;All you need are followings in a nutshell:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;A couple of servers on which &lt;strong&gt;koyomi worker&lt;/strong&gt; runs.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Datastore&lt;/strong&gt; with high availability.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Currently supported datastore types are &lt;strong&gt;MySQL&lt;/strong&gt; and &lt;strong&gt;SQLite&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;next-step:3976528693a0108357f4928017600865&#34;&gt;Next Step&lt;/h2&gt;
-
-&lt;p&gt;Read following materials to use &lt;strong&gt;Koyomi&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;bootstrap&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
     <item>
       <title>About</title>
       <link>http://key-amb.github.io/App-Koyomi-Doc/about/</link>
-      <pubDate>Sun, 07 Jun 2015 00:29:01 +0900</pubDate>
+      <pubDate>Sun, 19 Jul 2015 01:00:00 +0900</pubDate>
       
       <guid>http://key-amb.github.io/App-Koyomi-Doc/about/</guid>
       <description>
 
 &lt;h2 id=&#34;version:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;VERSION&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;v0.5.0&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;v0.6.0&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;requirements:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;REQUIREMENTS&lt;/h2&gt;
 
@@ -95,6 +57,44 @@ Then let&amp;rsquo;s call that time &lt;em&gt;Timeout&lt;/em&gt;.&lt;/li&gt;
 &lt;h2 id=&#34;author:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;AUTHOR&lt;/h2&gt;
 
 &lt;p&gt;YASUTAKE Kiyoshi yasutake.kiyoshi@gmail.com&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>_index</title>
+      <link>http://key-amb.github.io/App-Koyomi-Doc/_index/</link>
+      <pubDate>Sun, 07 Jun 2015 21:07:48 +0900</pubDate>
+      
+      <guid>http://key-amb.github.io/App-Koyomi-Doc/_index/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-this:3976528693a0108357f4928017600865&#34;&gt;What is this?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Koyomi&lt;/strong&gt; is a simple distributed job scheduler which achieves High Availability.&lt;/p&gt;
+
+&lt;p&gt;You can run &lt;strong&gt;koyomi worker&lt;/strong&gt; on several servers.
+Then if one worker stops with a certain trouble, remaining alive workers will take after its jobs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;about&#34;&gt;About&lt;/a&gt; page shows its supported platform and additional info about &lt;em&gt;Koyomi&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-use:3976528693a0108357f4928017600865&#34;&gt;How to use?&lt;/h2&gt;
+
+&lt;p&gt;All you need are followings in a nutshell:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A couple of servers on which &lt;strong&gt;koyomi worker&lt;/strong&gt; runs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Datastore&lt;/strong&gt; with high availability.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Currently supported datastore types are &lt;strong&gt;MySQL&lt;/strong&gt; and &lt;strong&gt;SQLite&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;next-step:3976528693a0108357f4928017600865&#34;&gt;Next Step&lt;/h2&gt;
+
+&lt;p&gt;Read following materials to use &lt;strong&gt;Koyomi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;bootstrap&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
