@@ -1,6 +1,6 @@
 +++
 categories = ["general"]
-date = "2015-06-07T00:29:01+09:00"
+date = "2015-07-19T01:00:00+09:00"
 tags = ["document"]
 title = "About"
 
@@ -8,7 +8,7 @@ title = "About"
 
 ## VERSION
 
-_v0.5.0_
+_v0.6.0_
 
 ## REQUIREMENTS
 
