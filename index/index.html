@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Koyomi">
 		<link rel="icon" href="http://key-amb.github.io/App-Koyomi-Doc/favicon.ico">
-		<title>Koyomi</title>
+		<title>Indexes - Koyomi</title>
 		
 		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/highlight/magula.css">
 		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootstrap.min.css">
@@ -33,7 +33,7 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="http://key-amb.github.io/App-Koyomi-Doc/">Home</a></li>
+					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/">Home</a></li>
 			
 				
 				
@@ -44,7 +44,7 @@
 					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/bootstrap">Bootstrap</a></li>
 				
 					
-					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/index">Index</a></li>
+					<li class="active"><a href="http://key-amb.github.io/App-Koyomi-Doc/index">Index</a></li>
 				
 			
 				
@@ -56,55 +56,82 @@
 <div class="container">
 
 
-<main role="main">
-
 <div class="row">
+	<div class="col-sm-8 doc-main">
+	<main role="main">
+		<div class="doc-list-header">
+			<h3>Index</h3>
+		</div>
+
+		<div class="doc-list-entry">
+		<ul>
+		
+			
+				
+			
+			
+				
+			<li><a class="doc-entry" href="/App-Koyomi-Doc/about/">
+				<span class="doc-entry-title">About</span>
+				<span class="doc-entry-meta in-list">
+					(<time datetime="2015-07-19">July 19, 2015</time>)
+				</span>
+			</a></li>
+				
+			
+				
+				
+			
+				
+			<li><a class="doc-entry" href="/App-Koyomi-Doc/bootstrap/">
+				<span class="doc-entry-title">Getting Started</span>
+				<span class="doc-entry-meta in-list">
+					(<time datetime="2015-06-07">June 07, 2015</time>)
+				</span>
+			</a></li>
+				
+			
+			
+				
+			
+		
+			
+				
+			
+			
+				
+				
+			
+			
+				
+			
+		
+		</ul>
+		</div>
+
+	</main>
+	</div> 
+
 	
-	<div class="jumbotron">
-		<h1>Koyomi</h1>
-		<p>A simple distributed job scheduler.</p>
+<div class="col-sm-3 col-sm-offset-1 doc-sidebar">
+	<div class="sidebar-module">
+		<h4>Categories</h4>
+		<ul class="list-unstyled">
+		
+			<li><a class="tag-item" href="http://key-amb.github.io/App-Koyomi-Doc/categories/general">general</a></li>
+		
+		</ul>
+	</div>
+	<div class="sidebar-module">
+		<h4>Tags</h4>
+		<div class="tag-box">
+		
+			<a class="tag-item" href="http://key-amb.github.io/App-Koyomi-Doc/tags/document">document</a>
+		
+		</div>
 	</div>
 </div>
-
-
-	<div class="row doc-main">
-		<p class="doc-entry-meta"><time datetime="2015-06-07">June 07, 2015</time></p>
-		
-
-<h2 id="what-is-this:3976528693a0108357f4928017600865">What is this?</h2>
-
-<p><strong>Koyomi</strong> is a simple distributed job scheduler which achieves High Availability.</p>
-
-<p>You can run <strong>koyomi worker</strong> on several servers.
-Then if one worker stops with a certain trouble, remaining alive workers will take after its jobs.</p>
-
-<p><a href="about">About</a> page shows its supported platform and additional info about <em>Koyomi</em>.</p>
-
-<h2 id="how-to-use:3976528693a0108357f4928017600865">How to use?</h2>
-
-<p>All you need are followings in a nutshell:</p>
-
-<ul>
-<li>A couple of servers on which <strong>koyomi worker</strong> runs.</li>
-<li><strong>Datastore</strong> with high availability.</li>
-</ul>
-
-<p>Currently supported datastore types are <strong>MySQL</strong> and <strong>SQLite</strong>.</p>
-
-<h2 id="next-step:3976528693a0108357f4928017600865">Next Step</h2>
-
-<p>Read following materials to use <strong>Koyomi</strong>:</p>
-
-<ul>
-<li><a href="bootstrap">Getting Started</a></li>
-</ul>
-
-	</div>
-
-
-
-
-</main>
+</div> 
 
 
 <hr />
