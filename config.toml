@@ -1,4 +1,4 @@
-baseurl = "http://key-amb.github.io/App-Koyomi-Doc/"
+baseurl = "http://key-amb.github.io/App-Koyomi-Doc"
 languageCode = "en-us"
 title = "Koyomi"
 theme = "bootie-docs"
@@ -10,3 +10,4 @@ copyright = "Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved."
   mainMenu = ["about","bootstrap"]
   noCategoryLink = true
   repositoryUrl = "https://github.com/key-amb/perl5-App-Koyomi/"
+  highlightStyle = "magula"
