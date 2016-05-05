@@ -8,6 +8,7 @@ copyright = "Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved."
   description = "A simple distributed job scheduler."
   #withSitePosts = true
   mainMenu = ["about","bootstrap", "index"]
+  searchDomain = "key-amb.github.io/App-Koyomi-Doc"
   noCategoryLink = true
   repositoryUrl = "https://github.com/key-amb/perl5-App-Koyomi/"
   highlightStyle = "magula"
