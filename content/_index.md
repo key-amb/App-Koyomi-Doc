@@ -25,4 +25,4 @@ Currently supported datastore types are **MySQL** and **SQLite**.
 
 Read following materials to use **Koyomi**:
 
-* [Getting Started](bootstrap)
+* [Getting Started](getting-started)
