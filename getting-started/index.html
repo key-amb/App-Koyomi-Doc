@@ -40,7 +40,7 @@
 					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/about">About</a></li>
 				
 					
-					<li class="active"><a href="http://key-amb.github.io/App-Koyomi-Doc/bootstrap">Bootstrap</a></li>
+					<li class="active"><a href="http://key-amb.github.io/App-Koyomi-Doc/getting-started">Quickstart</a></li>
 				
 					
 					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/index">Index</a></li>
@@ -78,13 +78,13 @@
 				<section>
 					
 
-<h2 id="install:caf96f80dec81066bbd3e06dfe6b4d25">Install</h2>
+<h2 id="install:b6885e1f85551f51a4707c402f8200a3">Install</h2>
 
 <p>Currently <strong>Koyomi</strong> is available on GitHub and CPAN.</p>
 
 <p><em>Koyomi</em> depends on some external modules. And all its dependencies are written in <code>cpanfile</code>.</p>
 
-<h3 id="from-github:caf96f80dec81066bbd3e06dfe6b4d25">From GitHub</h3>
+<h3 id="from-github:b6885e1f85551f51a4707c402f8200a3">From GitHub</h3>
 
 <p>You can download archive files from <a href="https://github.com/key-amb/perl5-App-Koyomi/releases">https://github.com/key-amb/perl5-App-Koyomi/releases</a> .</p>
 
@@ -103,7 +103,7 @@ cd perl5-App-Koyomi-vX.Y.Z
 <pre><code>carton install
 </code></pre>
 
-<h3 id="from-cpan:caf96f80dec81066bbd3e06dfe6b4d25">From CPAN</h3>
+<h3 id="from-cpan:b6885e1f85551f51a4707c402f8200a3">From CPAN</h3>
 
 <pre><code>cpanm App::Koyomi
 </code></pre>
@@ -112,7 +112,7 @@ cd perl5-App-Koyomi-vX.Y.Z
 
 <p><a href="#">top</a></p>
 
-<h2 id="configure:caf96f80dec81066bbd3e06dfe6b4d25">Configure</h2>
+<h2 id="configure:b6885e1f85551f51a4707c402f8200a3">Configure</h2>
 
 <p>The default configuration file is <code>config/default.toml</code>.<br />
 You can edit the file for customization.
@@ -121,7 +121,7 @@ the path by environmental variable <code>$KOYOMI_CONFIG_PATH</code>.</p>
 
 <p>The following content shows available configuration parametes in the file.</p>
 
-<h3 id="general-parameters:caf96f80dec81066bbd3e06dfe6b4d25">General Parameters</h3>
+<h3 id="general-parameters:b6885e1f85551f51a4707c402f8200a3">General Parameters</h3>
 
 <pre><code>time_zone = &quot;Asia/Tokyo&quot; # Local time zone is used when not specified
 
@@ -130,7 +130,7 @@ the path by environmental variable <code>$KOYOMI_CONFIG_PATH</code>.</p>
 debug_mode = true
 </code></pre>
 
-<h3 id="logging-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Logging Parameters</h3>
+<h3 id="logging-parameters:b6885e1f85551f51a4707c402f8200a3">Logging Parameters</h3>
 
 <pre><code>[log]
 debug   = true            # Enable debug log
@@ -139,7 +139,7 @@ file    = true            # Output to log file
 file_path = /path/to/log  # Log file path
 </code></pre>
 
-<h3 id="job-scheduling-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Job Scheduling Parameters</h3>
+<h3 id="job-scheduling-parameters:b6885e1f85551f51a4707c402f8200a3">Job Scheduling Parameters</h3>
 
 <pre><code>[worker]
 interval_minutes = 1 # Worker interval
@@ -173,7 +173,7 @@ On the other hand, another <em>koyomi worker</em> tries to run the job around th
 But with the job record in <em>datastore</em>, it knows the other <em>worker</em> has run it.<br />
 When one <em>worker</em> has run a job within <code>job.lock_ttl_seconds</code>, the other <em>workers</em> quit to run the job.</p>
 
-<h3 id="data-source-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Data Source Parameters</h3>
+<h3 id="data-source-parameters:b6885e1f85551f51a4707c402f8200a3">Data Source Parameters</h3>
 
 <pre><code>[datasource.module]
 job       = &quot;Teng&quot;
@@ -206,26 +206,26 @@ Datasource <code>semaphore</code> stands for the record and lock entity which co
 <code>None</code> module is to be used when worker runs in a standalone mode while &ldquo;job&rdquo; is on local datastore like SQLite.
 Because exclusive control for job execution is not required when there is only single worker.</p>
 
-<h2 id="set-up-datastore:caf96f80dec81066bbd3e06dfe6b4d25">Set Up Datastore</h2>
+<h2 id="set-up-datastore:b6885e1f85551f51a4707c402f8200a3">Set Up Datastore</h2>
 
 <p>Here are descriptions about how to set up <em>datastore</em>.</p>
 
-<h3 id="mysql:caf96f80dec81066bbd3e06dfe6b4d25">MySQL</h3>
+<h3 id="mysql:b6885e1f85551f51a4707c402f8200a3">MySQL</h3>
 
 <p>MySQL database schema is available at <code>schema/mysql/koyomi.ddl</code> in the source code repository.</p>
 
-<h3 id="sqlite:caf96f80dec81066bbd3e06dfe6b4d25">SQLite</h3>
+<h3 id="sqlite:b6885e1f85551f51a4707c402f8200a3">SQLite</h3>
 
 <p>SQLite database schema is also available at <code>schema/sqlite/koyomi.ddl</code> in the source code repository.</p>
 
-<h3 id="job-registration:caf96f80dec81066bbd3e06dfe6b4d25">Job Registration</h3>
+<h3 id="job-registration:b6885e1f85551f51a4707c402f8200a3">Job Registration</h3>
 
 <p>You can register <code>jobs</code> by <strong>koyomi-cli</strong> (See below).<br />
 Note that you have to prepare configuration file with right datasource settings beforehand.</p>
 
-<h2 id="usage:caf96f80dec81066bbd3e06dfe6b4d25">Usage</h2>
+<h2 id="usage:b6885e1f85551f51a4707c402f8200a3">Usage</h2>
 
-<h3 id="worker:caf96f80dec81066bbd3e06dfe6b4d25">Worker</h3>
+<h3 id="worker:b6885e1f85551f51a4707c402f8200a3">Worker</h3>
 
 <p>You can launch <strong>koyomi worker</strong> in the way like this:</p>
 
@@ -234,7 +234,7 @@ Note that you have to prepare configuration file with right datasource settings 
 
 <p>You can see details of command-line options by <code>koyomi --help</code>.</p>
 
-<h3 id="cli:caf96f80dec81066bbd3e06dfe6b4d25">CLI</h3>
+<h3 id="cli:b6885e1f85551f51a4707c402f8200a3">CLI</h3>
 
 <p><code>koyomi-cli</code> is a handy command-line interface for CRUD of jobs.<br />
 Run <code>koyomi-cli help</code> to see how to use this script.</p>
@@ -257,28 +257,28 @@ Run <code>koyomi-cli help</code> to see how to use this script.</p>
 <ul>
 <li>
 <ul>
-<li><a href="#install:caf96f80dec81066bbd3e06dfe6b4d25">Install</a>
+<li><a href="#install:b6885e1f85551f51a4707c402f8200a3">Install</a>
 <ul>
-<li><a href="#from-github:caf96f80dec81066bbd3e06dfe6b4d25">From GitHub</a></li>
-<li><a href="#from-cpan:caf96f80dec81066bbd3e06dfe6b4d25">From CPAN</a></li>
+<li><a href="#from-github:b6885e1f85551f51a4707c402f8200a3">From GitHub</a></li>
+<li><a href="#from-cpan:b6885e1f85551f51a4707c402f8200a3">From CPAN</a></li>
 </ul></li>
-<li><a href="#configure:caf96f80dec81066bbd3e06dfe6b4d25">Configure</a>
+<li><a href="#configure:b6885e1f85551f51a4707c402f8200a3">Configure</a>
 <ul>
-<li><a href="#general-parameters:caf96f80dec81066bbd3e06dfe6b4d25">General Parameters</a></li>
-<li><a href="#logging-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Logging Parameters</a></li>
-<li><a href="#job-scheduling-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Job Scheduling Parameters</a></li>
-<li><a href="#data-source-parameters:caf96f80dec81066bbd3e06dfe6b4d25">Data Source Parameters</a></li>
+<li><a href="#general-parameters:b6885e1f85551f51a4707c402f8200a3">General Parameters</a></li>
+<li><a href="#logging-parameters:b6885e1f85551f51a4707c402f8200a3">Logging Parameters</a></li>
+<li><a href="#job-scheduling-parameters:b6885e1f85551f51a4707c402f8200a3">Job Scheduling Parameters</a></li>
+<li><a href="#data-source-parameters:b6885e1f85551f51a4707c402f8200a3">Data Source Parameters</a></li>
 </ul></li>
-<li><a href="#set-up-datastore:caf96f80dec81066bbd3e06dfe6b4d25">Set Up Datastore</a>
+<li><a href="#set-up-datastore:b6885e1f85551f51a4707c402f8200a3">Set Up Datastore</a>
 <ul>
-<li><a href="#mysql:caf96f80dec81066bbd3e06dfe6b4d25">MySQL</a></li>
-<li><a href="#sqlite:caf96f80dec81066bbd3e06dfe6b4d25">SQLite</a></li>
-<li><a href="#job-registration:caf96f80dec81066bbd3e06dfe6b4d25">Job Registration</a></li>
+<li><a href="#mysql:b6885e1f85551f51a4707c402f8200a3">MySQL</a></li>
+<li><a href="#sqlite:b6885e1f85551f51a4707c402f8200a3">SQLite</a></li>
+<li><a href="#job-registration:b6885e1f85551f51a4707c402f8200a3">Job Registration</a></li>
 </ul></li>
-<li><a href="#usage:caf96f80dec81066bbd3e06dfe6b4d25">Usage</a>
+<li><a href="#usage:b6885e1f85551f51a4707c402f8200a3">Usage</a>
 <ul>
-<li><a href="#worker:caf96f80dec81066bbd3e06dfe6b4d25">Worker</a></li>
-<li><a href="#cli:caf96f80dec81066bbd3e06dfe6b4d25">CLI</a></li>
+<li><a href="#worker:b6885e1f85551f51a4707c402f8200a3">Worker</a></li>
+<li><a href="#cli:b6885e1f85551f51a4707c402f8200a3">CLI</a></li>
 </ul></li>
 </ul></li>
 </ul>
