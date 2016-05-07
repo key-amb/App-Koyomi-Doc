@@ -1,6 +1,7 @@
 +++
 categories = ["general"]
 date = "2015-07-19T01:00:00+09:00"
+weight = 200
 tags = ["document"]
 title = "About"
 
