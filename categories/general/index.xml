@@ -2,233 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General on Koyomi</title>
-    <link>http://key-amb.github.io/App-Koyomi-Doc/categories/general/</link>
+    <link>https://progrhyme.github.io/App-Koyomi-Doc/categories/general/</link>
     <description>Recent content in General on Koyomi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved.</copyright>
-    <lastBuildDate>Sun, 19 Jul 2015 01:00:00 +0900</lastBuildDate>
-    <atom:link href="http://key-amb.github.io/App-Koyomi-Doc/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright (c) 2015-2017, IKEDA Kiyoshi; All rights reserved.</copyright>
+    <lastBuildDate>Sun, 16 Jul 2017 20:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://progrhyme.github.io/App-Koyomi-Doc/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>About</title>
-      <link>http://key-amb.github.io/App-Koyomi-Doc/about/</link>
-      <pubDate>Sun, 19 Jul 2015 01:00:00 +0900</pubDate>
+      <link>https://progrhyme.github.io/App-Koyomi-Doc/about/</link>
+      <pubDate>Sun, 16 Jul 2017 20:00:00 +0900</pubDate>
       
-      <guid>http://key-amb.github.io/App-Koyomi-Doc/about/</guid>
-      <description>
-
-&lt;h2 id=&#34;version:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;VERSION&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;v0.6.0&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;requirements:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;REQUIREMENTS&lt;/h2&gt;
-
-&lt;p&gt;You need Perl interpreter whose version is greater than or equal to &lt;em&gt;v5.10.1&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;This program is expected to run on almost UNIX like systems.&lt;br /&gt;
-But not expected to run on Windows. Because this program use &lt;em&gt;fork(2)&lt;/em&gt; of UNIX and POSIX &lt;em&gt;signal(2)&lt;/em&gt;, there may be problems on running it.&lt;/p&gt;
-
-&lt;h2 id=&#34;milestone:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;MILESTONE&lt;/h2&gt;
-
-&lt;p&gt;Here are what I plan to implement to &lt;em&gt;Koyomi&lt;/em&gt; towards &lt;strong&gt;&lt;em&gt;v1.0.0&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Semaphore&lt;/strong&gt; or &lt;strong&gt;Mutex&lt;/strong&gt; for job execution so that you can avoid a long-time job to run coincidently.&lt;/li&gt;
-&lt;li&gt;Concept of &lt;strong&gt;job timeout&lt;/strong&gt;. When &lt;em&gt;semphore&lt;/em&gt; or &lt;em&gt;mutex&lt;/em&gt; is implemented, a job must free it after job finishes.
-But a job might fail without cleaning it up properly.&lt;br /&gt;
-So after some time, it&amp;rsquo;s prefered to assume the job failed.
-Then let&amp;rsquo;s call that time &lt;em&gt;Timeout&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;Support for a few datasource types more.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;changes:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;CHANGES&lt;/h2&gt;
-
-&lt;p&gt;See &lt;a href=&#34;https://github.com/key-amb/perl5-App-Koyomi/blob/master/Changes&#34;&gt;Changes&lt;/a&gt; on the repository.&lt;/p&gt;
-
-&lt;h2 id=&#34;license:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;LICENSE&lt;/h2&gt;
-
-&lt;p&gt;Copyright &amp;copy; YASUTAKE Kiyoshi.&lt;/p&gt;
-
-&lt;p&gt;This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.&lt;/p&gt;
-
-&lt;p&gt;See &lt;a href=&#34;https://github.com/key-amb/perl5-App-Koyomi/blob/master/LICENSE&#34;&gt;LICENSE&lt;/a&gt; file.&lt;/p&gt;
-
-&lt;h2 id=&#34;author:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;AUTHOR&lt;/h2&gt;
-
-&lt;p&gt;YASUTAKE Kiyoshi yasutake.kiyoshi@gmail.com&lt;/p&gt;
-</description>
+      <guid>https://progrhyme.github.io/App-Koyomi-Doc/about/</guid>
+      <description>VERSION v0.6.0
+REQUIREMENTS You need Perl interpreter whose version is greater than or equal to v5.10.1.
+This program is expected to run on almost UNIX like systems.
+But not expected to run on Windows. Because this program use fork(2) of UNIX and POSIX signal(2), there may be problems on running it.
+MILESTONE Here are what I plan to implement to Koyomi towards v1.0.0:
+ Semaphore or Mutex for job execution so that you can avoid a long-time job to run coincidently.</description>
     </item>
     
     <item>
       <title>Getting Started</title>
-      <link>http://key-amb.github.io/App-Koyomi-Doc/getting-started/</link>
+      <link>https://progrhyme.github.io/App-Koyomi-Doc/getting-started/</link>
       <pubDate>Sun, 07 Jun 2015 00:25:13 +0900</pubDate>
       
-      <guid>http://key-amb.github.io/App-Koyomi-Doc/getting-started/</guid>
-      <description>
-
-&lt;h2 id=&#34;install:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Install&lt;/h2&gt;
-
-&lt;p&gt;Currently &lt;strong&gt;Koyomi&lt;/strong&gt; is available on GitHub and CPAN.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Koyomi&lt;/em&gt; depends on some external modules. And all its dependencies are written in &lt;code&gt;cpanfile&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;from-github:b6885e1f85551f51a4707c402f8200a3&#34;&gt;From GitHub&lt;/h3&gt;
-
-&lt;p&gt;You can download archive files from &lt;a href=&#34;https://github.com/key-amb/perl5-App-Koyomi/releases&#34;&gt;https://github.com/key-amb/perl5-App-Koyomi/releases&lt;/a&gt; .&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;wget https://github.com/key-amb/perl5-App-Koyomi/archive/vX.Y.Z.tar.gz
-tar xvzf perl5-App-Koyomi-vX.Y.Z.tar.gz
-cd perl5-App-Koyomi-vX.Y.Z
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you need to install dependent modules of &lt;em&gt;Koyomi&lt;/em&gt;, install them by &lt;code&gt;cpanfile&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cpanm --installdeps .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Or you can use &lt;a href=&#34;http://search.cpan.org/dist/carton/&#34;&gt;carton&lt;/a&gt; to install modules under &lt;code&gt;local/&lt;/code&gt; directory.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;carton install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;from-cpan:b6885e1f85551f51a4707c402f8200a3&#34;&gt;From CPAN&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;cpanm App::Koyomi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This installs all dependent modules of &lt;em&gt;Koyomi&lt;/em&gt; into your current perl.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;#&#34;&gt;top&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;configure:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Configure&lt;/h2&gt;
-
-&lt;p&gt;The default configuration file is &lt;code&gt;config/default.toml&lt;/code&gt;.&lt;br /&gt;
-You can edit the file for customization.
-Or when you want to use the configuration file in another path, you can specify
-the path by environmental variable &lt;code&gt;$KOYOMI_CONFIG_PATH&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The following content shows available configuration parametes in the file.&lt;/p&gt;
-
-&lt;h3 id=&#34;general-parameters:b6885e1f85551f51a4707c402f8200a3&#34;&gt;General Parameters&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;time_zone = &amp;quot;Asia/Tokyo&amp;quot; # Local time zone is used when not specified
-
-# Enable some debug parameters (see &amp;quot;Debug Parameters&amp;quot; below)
-# Don&#39;t set &amp;quot;true&amp;quot; on production environment.
-debug_mode = true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;logging-parameters:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Logging Parameters&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;[log]
-debug   = true            # Enable debug log
-console = true            # Output to stderr
-file    = true            # Output to log file
-file_path = /path/to/log  # Log file path
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;job-scheduling-parameters:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Job Scheduling Parameters&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;[worker]
-interval_minutes = 1 # Worker interval
-
-# Must be shorter than interval_minutes
-minimum_interval_seconds = 30
-
-[schedule]
-update_interval_seconds = 120 # How often it re-fetch schedule from Datastore
-
-[job]
-# Must be shorter than worker.minimum_interval_seconds
-lock_ttl_seconds = 25
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;When &lt;code&gt;worker.interval_minutes = 1&lt;/code&gt;, &lt;em&gt;koyomi worker&lt;/em&gt; wakes up and execute scheduled jobs at that time once a minute like &lt;strong&gt;cron&lt;/strong&gt; daemon.
-You can customize the parameter for longer intervals.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Koyomi worker&lt;/em&gt; tries to wake up when the second of time equals &lt;code&gt;00&lt;/code&gt; (ex: &lt;code&gt;T09:03:00&lt;/code&gt;).
-But it sleeps at least &lt;code&gt;worker.minimum_interval_seconds&lt;/code&gt; every after spawning jobs once a &lt;code&gt;worker.interval_minutes&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;So if you start &lt;em&gt;koyomi worker&lt;/em&gt; at &lt;code&gt;T09:02:55&lt;/code&gt; and given &lt;code&gt;worker.minimum_interval_seconds = 30&lt;/code&gt;, next time &lt;em&gt;wokrer&lt;/em&gt; wakes up at &lt;code&gt;T09:03:25&lt;/code&gt;, after that &lt;code&gt;T09:04:00&lt;/code&gt;, then &lt;code&gt;T09:05:00&lt;/code&gt;, &amp;hellip;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Koyomi worker&lt;/em&gt; fetches jobs schedule from &lt;strong&gt;Datastore&lt;/strong&gt; on start-up, and refetch it every after &lt;code&gt;schedule.update_interval_seconds&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Multiple &lt;em&gt;koyomi workers&lt;/em&gt; are supposed to run with the same schedule &lt;em&gt;datastore&lt;/em&gt;.&lt;br /&gt;
-Only one &lt;em&gt;koyomi worker&lt;/em&gt; runs a certain job at a time.&lt;/p&gt;
-
-&lt;p&gt;When a &lt;em&gt;koyomi worker&lt;/em&gt; wins to run a job, it records on &lt;em&gt;datastore&lt;/em&gt; the &amp;ldquo;time&amp;rdquo; and the &amp;ldquo;hostname&amp;rdquo; and the &amp;ldquo;process id&amp;rdquo;.&lt;br /&gt;
-On the other hand, another &lt;em&gt;koyomi worker&lt;/em&gt; tries to run the job around the time.&lt;br /&gt;
-But with the job record in &lt;em&gt;datastore&lt;/em&gt;, it knows the other &lt;em&gt;worker&lt;/em&gt; has run it.&lt;br /&gt;
-When one &lt;em&gt;worker&lt;/em&gt; has run a job within &lt;code&gt;job.lock_ttl_seconds&lt;/code&gt;, the other &lt;em&gt;workers&lt;/em&gt; quit to run the job.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-source-parameters:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Data Source Parameters&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;[datasource.module]
-job       = &amp;quot;Teng&amp;quot;
-semaphore = &amp;quot;Teng&amp;quot;
-#semaphore = &amp;quot;None&amp;quot;
-
-[datasource.connector]
-dsn      = &amp;quot;dbi:mysql:database=koyomi;host=127.0.0.1;port=3306&amp;quot;
-#dsn      = &amp;quot;dbi:SQLite:koyomi.sqlite&amp;quot;
-user     = &amp;quot;root&amp;quot;
-password = &amp;quot;&amp;quot;
-
-# Can override for each entity
-[datasource.connector.job]
-dsn  = ...
-user = &amp;quot;foo&amp;quot;
-password = &amp;quot;xxx&amp;quot;
-
-[datasource.connector.semaphore]
-# Can override &amp;quot;datasource.connector&amp;quot;, too.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Datasource &lt;code&gt;job&lt;/code&gt; stands for job schedules.&lt;br /&gt;
-Datasource &lt;code&gt;semaphore&lt;/code&gt; stands for the record and lock entity which controls if one &lt;em&gt;koyomi worker&lt;/em&gt; can run a job or not.&lt;/p&gt;
-
-&lt;p&gt;You can specify perl module to access each entity of &lt;em&gt;datastore&lt;/em&gt;.&lt;br /&gt;
-&lt;code&gt;Teng&lt;/code&gt; modules are implemented for both &amp;ldquo;job&amp;rdquo; and &amp;ldquo;semaphore&amp;rdquo; datastore.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;None&lt;/code&gt; module which is only for &amp;ldquo;semaphore&amp;rdquo; satisfies the required interface of &amp;ldquo;semaphore&amp;rdquo; module, but actually does nothing about &amp;ldquo;semaphore&amp;rdquo;.&lt;br /&gt;
-&lt;code&gt;None&lt;/code&gt; module is to be used when worker runs in a standalone mode while &amp;ldquo;job&amp;rdquo; is on local datastore like SQLite.
-Because exclusive control for job execution is not required when there is only single worker.&lt;/p&gt;
-
-&lt;h2 id=&#34;set-up-datastore:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Set Up Datastore&lt;/h2&gt;
-
-&lt;p&gt;Here are descriptions about how to set up &lt;em&gt;datastore&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;mysql:b6885e1f85551f51a4707c402f8200a3&#34;&gt;MySQL&lt;/h3&gt;
-
-&lt;p&gt;MySQL database schema is available at &lt;code&gt;schema/mysql/koyomi.ddl&lt;/code&gt; in the source code repository.&lt;/p&gt;
-
-&lt;h3 id=&#34;sqlite:b6885e1f85551f51a4707c402f8200a3&#34;&gt;SQLite&lt;/h3&gt;
-
-&lt;p&gt;SQLite database schema is also available at &lt;code&gt;schema/sqlite/koyomi.ddl&lt;/code&gt; in the source code repository.&lt;/p&gt;
-
-&lt;h3 id=&#34;job-registration:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Job Registration&lt;/h3&gt;
-
-&lt;p&gt;You can register &lt;code&gt;jobs&lt;/code&gt; by &lt;strong&gt;koyomi-cli&lt;/strong&gt; (See below).&lt;br /&gt;
-Note that you have to prepare configuration file with right datasource settings beforehand.&lt;/p&gt;
-
-&lt;h2 id=&#34;usage:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;h3 id=&#34;worker:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Worker&lt;/h3&gt;
-
-&lt;p&gt;You can launch &lt;strong&gt;koyomi worker&lt;/strong&gt; in the way like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;koyomi -c /path/to/config.toml [--debug]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can see details of command-line options by &lt;code&gt;koyomi --help&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;cli:b6885e1f85551f51a4707c402f8200a3&#34;&gt;CLI&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;koyomi-cli&lt;/code&gt; is a handy command-line interface for CRUD of jobs.&lt;br /&gt;
-Run &lt;code&gt;koyomi-cli help&lt;/code&gt; to see how to use this script.&lt;/p&gt;
-</description>
+      <guid>https://progrhyme.github.io/App-Koyomi-Doc/getting-started/</guid>
+      <description>Install Currently Koyomi is available on GitHub and CPAN.
+Koyomi depends on some external modules. And all its dependencies are written in cpanfile.
+From GitHub You can download archive files from https://github.com/key-amb/perl5-App-Koyomi/releases .
+wget https://github.com/key-amb/perl5-App-Koyomi/archive/vX.Y.Z.tar.gz tar xvzf perl5-App-Koyomi-vX.Y.Z.tar.gz cd perl5-App-Koyomi-vX.Y.Z  If you need to install dependent modules of Koyomi, install them by cpanfile.
+cpanm --installdeps .  Or you can use carton to install modules under local/ directory.</description>
     </item>
     
   </channel>

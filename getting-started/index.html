@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Koyomi">
-		<link rel="icon" href="http://key-amb.github.io/App-Koyomi-Doc/favicon.ico">
+		<link rel="icon" href="https://progrhyme.github.io/App-Koyomi-Doc/favicon.ico">
 		<title>Getting Started - Koyomi</title>
 		
-		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/highlight/magula.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootstrap.min.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/theme.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/App-Koyomi-Doc/css/bootie-docs.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/App-Koyomi-Doc/css/highlight/magula.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/App-Koyomi-Doc/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/App-Koyomi-Doc/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/App-Koyomi-Doc/css/theme.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/App-Koyomi-Doc/css/bootie-docs.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/App-Koyomi-Doc/css/site.css">
 	</head>
 
 <body role="document">
@@ -28,19 +28,17 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="http://key-amb.github.io/App-Koyomi-Doc/">Koyomi</a>
+				<a class="navbar-brand" href="https://progrhyme.github.io/App-Koyomi-Doc/">Koyomi</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/">Home</a></li>
+					<li ><a href="https://progrhyme.github.io/App-Koyomi-Doc/">Home</a></li>
+			
 			
 				
+					<li ><a href="/App-Koyomi-Doc/about/">About</a></li>
 				
-					
-					<li ><a href="http://key-amb.github.io/App-Koyomi-Doc/about">About</a></li>
-				
-					
-					<li class="active"><a href="http://key-amb.github.io/App-Koyomi-Doc/getting-started">Quickstart</a></li>
+					<li class="active"><a href="/App-Koyomi-Doc/getting-started/">Quickstart</a></li>
 				
 			
 				
@@ -48,7 +46,7 @@
 				
 				<form class="navbar-form navbar-left" role="search" action="https://www.google.co.jp/search" method="get">
 					<div class="input-group doc-search-form">
-						<input type="hidden" name="as_sitesearch" value="key-amb.github.io/App-Koyomi-Doc">
+						<input type="hidden" name="as_sitesearch" value="progrhyme.github.io/App-Koyomi-Doc">
 						<input type="text" name="as_q" class="search-query doc-search-input-text" placeholder="Search Site">
 						<span class="input-group-addon input-group-btn doc-search-input-btn">
 							<button class="btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
@@ -75,13 +73,13 @@
 				<section>
 					
 
-<h2 id="install:b6885e1f85551f51a4707c402f8200a3">Install</h2>
+<h2 id="install">Install</h2>
 
 <p>Currently <strong>Koyomi</strong> is available on GitHub and CPAN.</p>
 
 <p><em>Koyomi</em> depends on some external modules. And all its dependencies are written in <code>cpanfile</code>.</p>
 
-<h3 id="from-github:b6885e1f85551f51a4707c402f8200a3">From GitHub</h3>
+<h3 id="from-github">From GitHub</h3>
 
 <p>You can download archive files from <a href="https://github.com/key-amb/perl5-App-Koyomi/releases">https://github.com/key-amb/perl5-App-Koyomi/releases</a> .</p>
 
@@ -100,7 +98,7 @@ cd perl5-App-Koyomi-vX.Y.Z
 <pre><code>carton install
 </code></pre>
 
-<h3 id="from-cpan:b6885e1f85551f51a4707c402f8200a3">From CPAN</h3>
+<h3 id="from-cpan">From CPAN</h3>
 
 <pre><code>cpanm App::Koyomi
 </code></pre>
@@ -109,7 +107,7 @@ cd perl5-App-Koyomi-vX.Y.Z
 
 <p><a href="#">top</a></p>
 
-<h2 id="configure:b6885e1f85551f51a4707c402f8200a3">Configure</h2>
+<h2 id="configure">Configure</h2>
 
 <p>The default configuration file is <code>config/default.toml</code>.<br />
 You can edit the file for customization.
@@ -118,7 +116,7 @@ the path by environmental variable <code>$KOYOMI_CONFIG_PATH</code>.</p>
 
 <p>The following content shows available configuration parametes in the file.</p>
 
-<h3 id="general-parameters:b6885e1f85551f51a4707c402f8200a3">General Parameters</h3>
+<h3 id="general-parameters">General Parameters</h3>
 
 <pre><code>time_zone = &quot;Asia/Tokyo&quot; # Local time zone is used when not specified
 
@@ -127,7 +125,7 @@ the path by environmental variable <code>$KOYOMI_CONFIG_PATH</code>.</p>
 debug_mode = true
 </code></pre>
 
-<h3 id="logging-parameters:b6885e1f85551f51a4707c402f8200a3">Logging Parameters</h3>
+<h3 id="logging-parameters">Logging Parameters</h3>
 
 <pre><code>[log]
 debug   = true            # Enable debug log
@@ -136,7 +134,7 @@ file    = true            # Output to log file
 file_path = /path/to/log  # Log file path
 </code></pre>
 
-<h3 id="job-scheduling-parameters:b6885e1f85551f51a4707c402f8200a3">Job Scheduling Parameters</h3>
+<h3 id="job-scheduling-parameters">Job Scheduling Parameters</h3>
 
 <pre><code>[worker]
 interval_minutes = 1 # Worker interval
@@ -170,7 +168,7 @@ On the other hand, another <em>koyomi worker</em> tries to run the job around th
 But with the job record in <em>datastore</em>, it knows the other <em>worker</em> has run it.<br />
 When one <em>worker</em> has run a job within <code>job.lock_ttl_seconds</code>, the other <em>workers</em> quit to run the job.</p>
 
-<h3 id="data-source-parameters:b6885e1f85551f51a4707c402f8200a3">Data Source Parameters</h3>
+<h3 id="data-source-parameters">Data Source Parameters</h3>
 
 <pre><code>[datasource.module]
 job       = &quot;Teng&quot;
@@ -203,26 +201,26 @@ Datasource <code>semaphore</code> stands for the record and lock entity which co
 <code>None</code> module is to be used when worker runs in a standalone mode while &ldquo;job&rdquo; is on local datastore like SQLite.
 Because exclusive control for job execution is not required when there is only single worker.</p>
 
-<h2 id="set-up-datastore:b6885e1f85551f51a4707c402f8200a3">Set Up Datastore</h2>
+<h2 id="set-up-datastore">Set Up Datastore</h2>
 
 <p>Here are descriptions about how to set up <em>datastore</em>.</p>
 
-<h3 id="mysql:b6885e1f85551f51a4707c402f8200a3">MySQL</h3>
+<h3 id="mysql">MySQL</h3>
 
 <p>MySQL database schema is available at <code>schema/mysql/koyomi.ddl</code> in the source code repository.</p>
 
-<h3 id="sqlite:b6885e1f85551f51a4707c402f8200a3">SQLite</h3>
+<h3 id="sqlite">SQLite</h3>
 
 <p>SQLite database schema is also available at <code>schema/sqlite/koyomi.ddl</code> in the source code repository.</p>
 
-<h3 id="job-registration:b6885e1f85551f51a4707c402f8200a3">Job Registration</h3>
+<h3 id="job-registration">Job Registration</h3>
 
 <p>You can register <code>jobs</code> by <strong>koyomi-cli</strong> (See below).<br />
 Note that you have to prepare configuration file with right datasource settings beforehand.</p>
 
-<h2 id="usage:b6885e1f85551f51a4707c402f8200a3">Usage</h2>
+<h2 id="usage">Usage</h2>
 
-<h3 id="worker:b6885e1f85551f51a4707c402f8200a3">Worker</h3>
+<h3 id="worker">Worker</h3>
 
 <p>You can launch <strong>koyomi worker</strong> in the way like this:</p>
 
@@ -231,7 +229,7 @@ Note that you have to prepare configuration file with right datasource settings 
 
 <p>You can see details of command-line options by <code>koyomi --help</code>.</p>
 
-<h3 id="cli:b6885e1f85551f51a4707c402f8200a3">CLI</h3>
+<h3 id="cli">CLI</h3>
 
 <p><code>koyomi-cli</code> is a handy command-line interface for CRUD of jobs.<br />
 Run <code>koyomi-cli help</code> to see how to use this script.</p>
@@ -255,28 +253,28 @@ Run <code>koyomi-cli help</code> to see how to use this script.</p>
 <ul>
 <li>
 <ul>
-<li><a href="#install:b6885e1f85551f51a4707c402f8200a3">Install</a>
+<li><a href="#install">Install</a>
 <ul>
-<li><a href="#from-github:b6885e1f85551f51a4707c402f8200a3">From GitHub</a></li>
-<li><a href="#from-cpan:b6885e1f85551f51a4707c402f8200a3">From CPAN</a></li>
+<li><a href="#from-github">From GitHub</a></li>
+<li><a href="#from-cpan">From CPAN</a></li>
 </ul></li>
-<li><a href="#configure:b6885e1f85551f51a4707c402f8200a3">Configure</a>
+<li><a href="#configure">Configure</a>
 <ul>
-<li><a href="#general-parameters:b6885e1f85551f51a4707c402f8200a3">General Parameters</a></li>
-<li><a href="#logging-parameters:b6885e1f85551f51a4707c402f8200a3">Logging Parameters</a></li>
-<li><a href="#job-scheduling-parameters:b6885e1f85551f51a4707c402f8200a3">Job Scheduling Parameters</a></li>
-<li><a href="#data-source-parameters:b6885e1f85551f51a4707c402f8200a3">Data Source Parameters</a></li>
+<li><a href="#general-parameters">General Parameters</a></li>
+<li><a href="#logging-parameters">Logging Parameters</a></li>
+<li><a href="#job-scheduling-parameters">Job Scheduling Parameters</a></li>
+<li><a href="#data-source-parameters">Data Source Parameters</a></li>
 </ul></li>
-<li><a href="#set-up-datastore:b6885e1f85551f51a4707c402f8200a3">Set Up Datastore</a>
+<li><a href="#set-up-datastore">Set Up Datastore</a>
 <ul>
-<li><a href="#mysql:b6885e1f85551f51a4707c402f8200a3">MySQL</a></li>
-<li><a href="#sqlite:b6885e1f85551f51a4707c402f8200a3">SQLite</a></li>
-<li><a href="#job-registration:b6885e1f85551f51a4707c402f8200a3">Job Registration</a></li>
+<li><a href="#mysql">MySQL</a></li>
+<li><a href="#sqlite">SQLite</a></li>
+<li><a href="#job-registration">Job Registration</a></li>
 </ul></li>
-<li><a href="#usage:b6885e1f85551f51a4707c402f8200a3">Usage</a>
+<li><a href="#usage">Usage</a>
 <ul>
-<li><a href="#worker:b6885e1f85551f51a4707c402f8200a3">Worker</a></li>
-<li><a href="#cli:b6885e1f85551f51a4707c402f8200a3">CLI</a></li>
+<li><a href="#worker">Worker</a></li>
+<li><a href="#cli">CLI</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -288,7 +286,7 @@ Run <code>koyomi-cli help</code> to see how to use this script.</p>
 		<ul class="sidebar-category-list">
 		
 			<li>
-				<a href="http://key-amb.github.io/App-Koyomi-Doc/categories/general">
+				<a href="https://progrhyme.github.io/App-Koyomi-Doc/categories/general">
 					<span class="doc-list-category">General</span>
 				</a>
 				<ul>
@@ -308,7 +306,7 @@ Run <code>koyomi-cli help</code> to see how to use this script.</p>
 		<h4 class="sidebar-heading">Tags</h4>
 		<div class="tag-box">
 		
-			<a class="tag-item" href="http://key-amb.github.io/App-Koyomi-Doc/tags/document">document</a>
+			<a class="tag-item" href="https://progrhyme.github.io/App-Koyomi-Doc/tags/document">document</a>
 		
 		</div>
 	</div>
@@ -329,20 +327,20 @@ Run <code>koyomi-cli help</code> to see how to use this script.</p>
 </div> 
 
 <footer class="doc-footer">
-	<p class="doc-footer-em">Browse <strong><a href="https://github.com/key-amb/perl5-App-Koyomi/">Repository</a></strong></p>
-	<p>Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved.</p>
+	<p class="doc-footer-em">Browse <strong><a href="https://github.com/progrhyme/perl5-App-Koyomi/">Repository</a></strong></p>
+	<p>Copyright (c) 2015-2017, IKEDA Kiyoshi; All rights reserved.</p>
 	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
 </footer>
 
 
 
-<script src="http://key-amb.github.io/App-Koyomi-Doc/js/jquery.min.js"></script>
-<script src="http://key-amb.github.io/App-Koyomi-Doc/js/bootstrap.min.js"></script>
+<script src="https://progrhyme.github.io/App-Koyomi-Doc/js/jquery.min.js"></script>
+<script src="https://progrhyme.github.io/App-Koyomi-Doc/js/bootstrap.min.js"></script>
 
-<script src="http://key-amb.github.io/App-Koyomi-Doc/js/highlight.pack.js"></script>
+<script src="https://progrhyme.github.io/App-Koyomi-Doc/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="http://key-amb.github.io/App-Koyomi-Doc/js/ie10-viewport-bug-workaround.js"></script>
-<script src="http://key-amb.github.io/App-Koyomi-Doc/js/bootie-docs.js"></script>
+<script src="https://progrhyme.github.io/App-Koyomi-Doc/js/ie10-viewport-bug-workaround.js"></script>
+<script src="https://progrhyme.github.io/App-Koyomi-Doc/js/bootie-docs.js"></script>
 
 </body>
 </html>
