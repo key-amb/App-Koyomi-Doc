@@ -1,21 +1,23 @@
-baseurl = "http://key-amb.github.io/App-Koyomi-Doc"
+baseurl = "https://progrhyme.github.io/App-Koyomi-Doc"
 languageCode = "en-us"
 title = "Koyomi"
 theme = "bootie-docs"
-copyright = "Copyright (c) 2015, YASUTAKE Kiyoshi; All rights reserved."
+copyright = "Copyright (c) 2015-2017, IKEDA Kiyoshi; All rights reserved."
 
 [params]
   description = "A simple distributed job scheduler."
   #withSitePosts = true
-  searchDomain = "key-amb.github.io/App-Koyomi-Doc"
+  searchDomain = "progrhyme.github.io/App-Koyomi-Doc"
   noCategoryLink = true
-  repositoryUrl = "https://github.com/key-amb/perl5-App-Koyomi/"
+  repositoryUrl = "https://github.com/progrhyme/perl5-App-Koyomi/"
   highlightStyle = "magula"
 
-[[params.mainMenu]]
-  name = "About"
-  link = "about"
+[[menu.main]]
+  name   = "About"
+  url    = "/about/"
+  weight = 20
 
-[[params.mainMenu]]
-  name = "Quickstart"
-  link = "getting-started"
+[[menu.main]]
+  name   = "Quickstart"
+  url    = "/getting-started/"
+  weight = 30

@@ -1,6 +1,6 @@
 +++
 categories = ["general"]
-date = "2015-07-19T01:00:00+09:00"
+date = "2017-07-16T20:00:00+09:00"
 weight = 200
 tags = ["document"]
 title = "About"
@@ -31,16 +31,16 @@ Then let's call that time _Timeout_.
 
 ## CHANGES
 
-See [Changes](https://github.com/key-amb/perl5-App-Koyomi/blob/master/Changes) on the repository.
+See [Changes](https://github.com/progrhyme/perl5-App-Koyomi/blob/master/Changes) on the repository.
 
 ## LICENSE
 
-Copyright (C) YASUTAKE Kiyoshi.
+Copyright (C) IKEDA Kiyoshi.
 
 This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
-See [LICENSE](https://github.com/key-amb/perl5-App-Koyomi/blob/master/LICENSE) file.
+See [LICENSE](https://github.com/progrhyme/perl5-App-Koyomi/blob/master/LICENSE) file.
 
 ## AUTHOR
 
-YASUTAKE Kiyoshi yasutake.kiyoshi@gmail.com
+IKEDA Kiyoshi progrhyme@gmail.com

@@ -1,6 +1,6 @@
 +++
 categories = ["general"]
-date = "2015-06-07T00:25:13+09:00"
+date = "2017-07-16T20:30:00+09:00"
 weight = 210
 tags = ["document"]
 title = "Getting Started"
@@ -14,10 +14,10 @@ _Koyomi_ depends on some external modules. And all its dependencies are written 
 
 ### From GitHub
 
-You can download archive files from https://github.com/key-amb/perl5-App-Koyomi/releases .
+You can download archive files from https://github.com/progrhyme/perl5-App-Koyomi/releases .
 
 ```
-wget https://github.com/key-amb/perl5-App-Koyomi/archive/vX.Y.Z.tar.gz
+wget https://github.com/progrhyme/perl5-App-Koyomi/archive/vX.Y.Z.tar.gz
 tar xvzf perl5-App-Koyomi-vX.Y.Z.tar.gz
 cd perl5-App-Koyomi-vX.Y.Z
 ```
