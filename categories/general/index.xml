@@ -29,13 +29,13 @@ MILESTONE Here are what I plan to implement to Koyomi towards v1.0.0:
     <item>
       <title>Getting Started</title>
       <link>https://progrhyme.github.io/App-Koyomi-Doc/getting-started/</link>
-      <pubDate>Sun, 07 Jun 2015 00:25:13 +0900</pubDate>
+      <pubDate>Sun, 16 Jul 2017 20:30:00 +0900</pubDate>
       
       <guid>https://progrhyme.github.io/App-Koyomi-Doc/getting-started/</guid>
       <description>Install Currently Koyomi is available on GitHub and CPAN.
 Koyomi depends on some external modules. And all its dependencies are written in cpanfile.
-From GitHub You can download archive files from https://github.com/key-amb/perl5-App-Koyomi/releases .
-wget https://github.com/key-amb/perl5-App-Koyomi/archive/vX.Y.Z.tar.gz tar xvzf perl5-App-Koyomi-vX.Y.Z.tar.gz cd perl5-App-Koyomi-vX.Y.Z  If you need to install dependent modules of Koyomi, install them by cpanfile.
+From GitHub You can download archive files from https://github.com/progrhyme/perl5-App-Koyomi/releases .
+wget https://github.com/progrhyme/perl5-App-Koyomi/archive/vX.Y.Z.tar.gz tar xvzf perl5-App-Koyomi-vX.Y.Z.tar.gz cd perl5-App-Koyomi-vX.Y.Z  If you need to install dependent modules of Koyomi, install them by cpanfile.
 cpanm --installdeps .  Or you can use carton to install modules under local/ directory.</description>
     </item>
     
